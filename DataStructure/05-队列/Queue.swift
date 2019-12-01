@@ -10,6 +10,7 @@ import Foundation
 
 /// 用链表实现队列，只用首尾，时间复杂度为O(1)
 class Queue<T: Equal> {
+    
     private let list: LinkedList = LinkedList<T>(first: nil, last: nil)
     
     func clear() {
