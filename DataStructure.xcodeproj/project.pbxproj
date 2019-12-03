@@ -21,6 +21,9 @@
 		1797014323804AD100BE0FBC /* ListProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1797014223804AD100BE0FBC /* ListProtocal.swift */; };
 		17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17970144238052A200BE0FBC /* ArrayOfList.swift */; };
 		17970147238063CA00BE0FBC /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17970146238063CA00BE0FBC /* LinkedList.swift */; };
+		179D0A602395457B0056C8D3 /* DeQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A5F2395457B0056C8D3 /* DeQueue.swift */; };
+		179D0A62239548990056C8D3 /* CircleQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A61239548990056C8D3 /* CircleQueue.swift */; };
+		179D0A642396AC110056C8D3 /* CircleDeQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A632396AC110056C8D3 /* CircleDeQueue.swift */; };
 		17E6A9F3237AFBA300998187 /* Fib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6A9F2237AFBA300998187 /* Fib.swift */; };
 		17E6A9F5237B01BE00998187 /* BigO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6A9F4237B01BE00998187 /* BigO.swift */; };
 		17EF58CB23818D8B0049B9F1 /* SingleCircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58CA23818D8B0049B9F1 /* SingleCircleLinkedList.swift */; };
@@ -71,6 +74,9 @@
 		1797014223804AD100BE0FBC /* ListProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocal.swift; sourceTree = "<group>"; };
 		17970144238052A200BE0FBC /* ArrayOfList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOfList.swift; sourceTree = "<group>"; };
 		17970146238063CA00BE0FBC /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		179D0A5F2395457B0056C8D3 /* DeQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeQueue.swift; sourceTree = "<group>"; };
+		179D0A61239548990056C8D3 /* CircleQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleQueue.swift; sourceTree = "<group>"; };
+		179D0A632396AC110056C8D3 /* CircleDeQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDeQueue.swift; sourceTree = "<group>"; };
 		17E6A9F2237AFBA300998187 /* Fib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fib.swift; sourceTree = "<group>"; };
 		17E6A9F4237B01BE00998187 /* BigO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigO.swift; sourceTree = "<group>"; };
 		17EF58CA23818D8B0049B9F1 /* SingleCircleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCircleLinkedList.swift; sourceTree = "<group>"; };
@@ -221,6 +227,9 @@
 			isa = PBXGroup;
 			children = (
 				17EF58D7238978FF0049B9F1 /* Queue.swift */,
+				179D0A5F2395457B0056C8D3 /* DeQueue.swift */,
+				179D0A61239548990056C8D3 /* CircleQueue.swift */,
+				179D0A632396AC110056C8D3 /* CircleDeQueue.swift */,
 			);
 			path = "05-队列";
 			sourceTree = "<group>";
@@ -452,10 +461,12 @@
 				17EF58D6238975E60049B9F1 /* Stack.swift in Sources */,
 				17EF58D02381A85C0049B9F1 /* 141_环形链表.swift in Sources */,
 				17E6A9F3237AFBA300998187 /* Fib.swift in Sources */,
+				179D0A62239548990056C8D3 /* CircleQueue.swift in Sources */,
 				173399AA2361F10100C8FEBC /* AppDelegate.swift in Sources */,
 				17EF58D8238978FF0049B9F1 /* Queue.swift in Sources */,
 				173399AC2361F10100C8FEBC /* SceneDelegate.swift in Sources */,
 				17EF58CB23818D8B0049B9F1 /* SingleCircleLinkedList.swift in Sources */,
+				179D0A602395457B0056C8D3 /* DeQueue.swift in Sources */,
 				17970141237DA02900BE0FBC /* ArrayList.swift in Sources */,
 				17EF58CD23819D960049B9F1 /* BidirectionalCircleLinkedList.swift in Sources */,
 				17E6A9F5237B01BE00998187 /* BigO.swift in Sources */,
@@ -464,6 +475,7 @@
 				17970147238063CA00BE0FBC /* LinkedList.swift in Sources */,
 				173399DC2361FAE500C8FEBC /* DynamicArray.swift in Sources */,
 				17EF58D42381A8890049B9F1 /* 237_删除链表中的节点.swift in Sources */,
+				179D0A642396AC110056C8D3 /* CircleDeQueue.swift in Sources */,
 				17EF58D22381A8770049B9F1 /* 206_翻转链表.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
