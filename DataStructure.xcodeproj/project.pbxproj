@@ -24,6 +24,9 @@
 		179D0A602395457B0056C8D3 /* DeQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A5F2395457B0056C8D3 /* DeQueue.swift */; };
 		179D0A62239548990056C8D3 /* CircleQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A61239548990056C8D3 /* CircleQueue.swift */; };
 		179D0A642396AC110056C8D3 /* CircleDeQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A632396AC110056C8D3 /* CircleDeQueue.swift */; };
+		179D0A66239949850056C8D3 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A65239949850056C8D3 /* BinaryTree.swift */; };
+		179D0A68239D0A010056C8D3 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A67239D0A010056C8D3 /* BinarySearchTree.swift */; };
+		179D0A6A239D30A40056C8D3 /* 226_翻转二叉树.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A69239D30A40056C8D3 /* 226_翻转二叉树.swift */; };
 		17E6A9F3237AFBA300998187 /* Fib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6A9F2237AFBA300998187 /* Fib.swift */; };
 		17E6A9F5237B01BE00998187 /* BigO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6A9F4237B01BE00998187 /* BigO.swift */; };
 		17EF58CB23818D8B0049B9F1 /* SingleCircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58CA23818D8B0049B9F1 /* SingleCircleLinkedList.swift */; };
@@ -77,6 +80,9 @@
 		179D0A5F2395457B0056C8D3 /* DeQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeQueue.swift; sourceTree = "<group>"; };
 		179D0A61239548990056C8D3 /* CircleQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleQueue.swift; sourceTree = "<group>"; };
 		179D0A632396AC110056C8D3 /* CircleDeQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDeQueue.swift; sourceTree = "<group>"; };
+		179D0A65239949850056C8D3 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		179D0A67239D0A010056C8D3 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
+		179D0A69239D30A40056C8D3 /* 226_翻转二叉树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "226_翻转二叉树.swift"; sourceTree = "<group>"; };
 		17E6A9F2237AFBA300998187 /* Fib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fib.swift; sourceTree = "<group>"; };
 		17E6A9F4237B01BE00998187 /* BigO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigO.swift; sourceTree = "<group>"; };
 		17EF58CA23818D8B0049B9F1 /* SingleCircleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCircleLinkedList.swift; sourceTree = "<group>"; };
@@ -244,6 +250,8 @@
 		17E6A9FC237B064F00998187 /* 06-二叉搜索树2 */ = {
 			isa = PBXGroup;
 			children = (
+				179D0A65239949850056C8D3 /* BinaryTree.swift */,
+				179D0A67239D0A010056C8D3 /* BinarySearchTree.swift */,
 			);
 			path = "06-二叉搜索树2";
 			sourceTree = "<group>";
@@ -320,6 +328,7 @@
 				17EF58D12381A8770049B9F1 /* 206_翻转链表.swift */,
 				17EF58D32381A8890049B9F1 /* 237_删除链表中的节点.swift */,
 				17EF58D9238C145F0049B9F1 /* 82_删除链表中的重复元素.swift */,
+				179D0A69239D30A40056C8D3 /* 226_翻转二叉树.swift */,
 			);
 			path = "00-leetcode";
 			sourceTree = "<group>";
@@ -458,7 +467,9 @@
 				173399AE2361F10100C8FEBC /* ViewController.swift in Sources */,
 				17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */,
 				17545421236896C6008BB626 /* ListNode.swift in Sources */,
+				179D0A6A239D30A40056C8D3 /* 226_翻转二叉树.swift in Sources */,
 				17EF58D6238975E60049B9F1 /* Stack.swift in Sources */,
+				179D0A66239949850056C8D3 /* BinaryTree.swift in Sources */,
 				17EF58D02381A85C0049B9F1 /* 141_环形链表.swift in Sources */,
 				17E6A9F3237AFBA300998187 /* Fib.swift in Sources */,
 				179D0A62239548990056C8D3 /* CircleQueue.swift in Sources */,
@@ -474,6 +485,7 @@
 				1797014323804AD100BE0FBC /* ListProtocal.swift in Sources */,
 				17970147238063CA00BE0FBC /* LinkedList.swift in Sources */,
 				173399DC2361FAE500C8FEBC /* DynamicArray.swift in Sources */,
+				179D0A68239D0A010056C8D3 /* BinarySearchTree.swift in Sources */,
 				17EF58D42381A8890049B9F1 /* 237_删除链表中的节点.swift in Sources */,
 				179D0A642396AC110056C8D3 /* CircleDeQueue.swift in Sources */,
 				17EF58D22381A8770049B9F1 /* 206_翻转链表.swift in Sources */,

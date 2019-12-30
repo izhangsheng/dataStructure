@@ -1,0 +1,269 @@
+//
+//  BinaryTree.swift
+//  DataStructure
+//
+//  Created by 张胜 on 2019/12/5.
+//  Copyright © 2019 张胜. All rights reserved.
+//
+
+import Foundation
+
+class TreeNode<Type: Comparable> {
+    var element: Type
+    var left: TreeNode<Type>?
+    var right: TreeNode<Type>?
+    var parent: TreeNode<Type>?
+    
+    init(element: Type, parent: TreeNode<Type>?) {
+        self.element = element
+        self.parent = parent
+    }
+    
+    public func isLeaf() -> Bool {
+        (left == nil && right == nil)
+    }
+    
+    public func hasTwoChildren() -> Bool {
+        (left != nil && right != nil)
+    }
+}
+
+class BinaryTree<Type: Comparable> {
+    public var count = 0
+    public var root: TreeNode<Type>?
+        
+    init(root: TreeNode<Type>?) {
+        self.root = root
+    }
+    
+    public func size() -> Int {
+        count
+    }
+
+    
+    public func isEmpty() -> Bool {
+        count == 0
+    }
+
+    public func clear() {
+        root = nil
+        count = 0
+    }
+    
+    
+    public func preorder(visitor: @escaping((Type) -> Bool)) {
+        if root == nil {
+            return
+        }
+        if visitor(root!.element) { return }
+        
+        preorder(visitor: visitor, node: root)
+    }
+    
+    // 利用栈迭代遍历
+    func preorderByStack() {
+        guard let root = root else {
+            return
+        }
+        var stack = [root]
+        print(root.element)
+        while !stack.isEmpty {
+            let node = stack.removeFirst()
+            var left = node.left
+            while left != nil {
+                print(left!.element)
+                stack.append(left!)
+                left = left?.left
+            }
+            if !stack.isEmpty {
+                let front = stack.last
+                let right = front?.right
+                if let rightOK = right {
+                    print(rightOK.element)
+                }
+            }
+        }
+    }
+    
+    public func inorder(visitor: @escaping((Type) -> Bool)) {
+        if root == nil {
+            return
+        }
+        if visitor(root!.element) { return }
+        inorder(visitor: visitor, node: root)
+    }
+    
+    public func postorder(visitor: @escaping((Type) -> Bool)) {
+        if root == nil {
+            return
+        }
+        if visitor(root!.element) { return }
+        
+        postorder(visitor: visitor, node: root)
+    }
+    
+    public func levelOrder(visitor: @escaping((Type) -> Bool)) {
+        if root == nil { return }
+        var queue = [root]
+        while !queue.isEmpty {
+            let node = queue.removeFirst()
+            if let nodeOK = node {
+                if visitor(nodeOK.element) { return }
+            }
+            
+            if let left = node?.left {
+                queue.append(left)
+            }
+            
+            if let right = node?.right {
+                queue.append(right)
+            }
+        }
+    }
+    
+    public func isComplete() -> Bool {
+        if root == nil { return false }
+        var queue = [root]
+        
+        var leaf = false
+        while !queue.isEmpty {
+            let ele = queue.removeFirst()
+            if leaf, !ele!.isLeaf() { return false }
+            
+            if let left = ele?.left {
+                queue.append(left)
+            } else if let _ = ele?.right {
+                return false
+            }
+            
+            if let right = ele?.right {
+                queue.append(right)
+            } else {
+                leaf = true
+            }
+        }
+        return leaf
+    }
+    
+    
+    public func height() -> UInt {
+        if root == nil { return 0 }
+        
+        // 树的高度
+        var height: UInt = 0
+        // 存储着每一层的元素数量
+        var levelSize = 1
+        var queue = [root]
+        
+        while !queue.isEmpty {
+            let node = queue.removeFirst()
+            levelSize -= 1
+            
+            if let left = node?.left {
+                queue.append(left)
+            }
+            
+            if let right = node?.right {
+                queue.append(right)
+            }
+            
+            if levelSize == 0 { // 意味着即将要访问下一层
+                levelSize = queue.count
+                height += 1
+            }
+        }
+        
+        return height
+    }
+    
+    public func height2() -> UInt {
+        return height(node: root)
+    }
+    
+    
+    
+    private func height(node: TreeNode<Type>?) -> UInt {
+        if node == nil { return 0 }
+        let leftH = height(node: node?.left)
+        let rightH = height(node: node?.right)
+        return 1 + max(leftH, rightH)
+    }
+
+    func predecessor(node: TreeNode<Type>?) -> TreeNode<Type>? {
+        guard let node = node else {
+            return nil
+        }
+        
+        // 前驱节点在左子树当中（left.right.right.right....）
+        let left = node.left
+        if let left = left {
+            var right = left.right
+            while right != nil {
+                right = right?.right
+            }
+            return right
+        }
+        
+        // （如果左边为空）从父节点、祖父节点中寻找前驱节点
+        
+        var parentNode = node.parent
+        var newNode: TreeNode<Type>? = node
+        while parentNode != nil, parentNode?.right?.element != newNode?.element {
+            newNode = parentNode
+            parentNode = newNode?.parent
+        }
+        return parentNode
+    }
+    
+    func successor(node: TreeNode<Type>?) -> TreeNode<Type>? {
+        guard let node = node else {
+            return nil
+        }
+        
+        // 后继节点在左子树当中（right.left.left.left....）
+        let right = node.right
+        if right != nil {
+            var left = right?.left
+            while left != nil {
+                left = left?.left
+            }
+            return left
+        }
+        
+        // 从父节点、祖父节点中寻找前驱节点
+        var parent = node.parent
+        var newNode: TreeNode<Type>? = node
+        while parent != nil, newNode?.element != parent?.left?.element {
+            newNode = parent
+            parent = parent?.parent
+        }
+
+        return parent
+    }
+}
+
+fileprivate extension BinaryTree {
+    func preorder(visitor: ((Type) -> Bool), node: TreeNode<Type>?) {
+        guard let nodeOK = node else { return }
+        /// 利用访问器访问节点
+        if visitor(nodeOK.element) { return }
+        preorder(visitor: visitor, node: nodeOK.left)
+        preorder(visitor: visitor, node: nodeOK.right)
+    }
+    
+    func inorder(visitor: ((Type) -> Bool), node: TreeNode<Type>?) {
+        guard let nodeOK = node else { return }
+        inorder(visitor: visitor, node: nodeOK.left)
+        /// 利用访问器访问节点
+        if visitor(nodeOK.element) { return }
+        preorder(visitor: visitor, node: nodeOK.right)
+    }
+    
+    func postorder(visitor: ((Type) -> Bool), node: TreeNode<Type>?) {
+        guard let nodeOK = node else { return }
+        postorder(visitor: visitor, node: nodeOK.left)
+        postorder(visitor: visitor, node: nodeOK.right)
+        /// 利用访问器访问节点
+        if visitor(nodeOK.element) { return }
+    }
+}
