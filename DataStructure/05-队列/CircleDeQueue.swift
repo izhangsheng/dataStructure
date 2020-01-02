@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CircleDeQueue<T: Equal> {
+class CircleDeQueue<T: Comparable> {
     private let defualt_capacity = 10
     
     private var front: Int = 0 // 记录第一个元素的下标

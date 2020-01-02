@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TreeNode<Type: Comparable> {
+public class TreeNode<Type: Comparable> {
     var element: Type
     var left: TreeNode<Type>?
     var right: TreeNode<Type>?
@@ -19,39 +19,49 @@ class TreeNode<Type: Comparable> {
         self.parent = parent
     }
     
-    public func isLeaf() -> Bool {
+    func isLeaf() -> Bool {
         (left == nil && right == nil)
     }
     
-    public func hasTwoChildren() -> Bool {
+    func hasTwoChildren() -> Bool {
         (left != nil && right != nil)
     }
 }
 
-class BinaryTree<Type: Comparable> {
-    public var count = 0
-    public var root: TreeNode<Type>?
+extension TreeNode: Comparable {
+    public static func < (lhs: TreeNode<Type>, rhs: TreeNode<Type>) -> Bool {
+        lhs.element < rhs.element
+    }
+    
+    public static func == (lhs: TreeNode<Type>, rhs: TreeNode<Type>) -> Bool {
+        lhs.element == rhs.element
+    }
+}
+
+public class BinaryTree<Type: Comparable> {
+    var count = 0
+    var root: TreeNode<Type>?
         
     init(root: TreeNode<Type>?) {
         self.root = root
     }
     
-    public func size() -> Int {
+    func size() -> Int {
         count
     }
 
     
-    public func isEmpty() -> Bool {
+    func isEmpty() -> Bool {
         count == 0
     }
 
-    public func clear() {
+    func clear() {
         root = nil
         count = 0
     }
     
     
-    public func preorder(visitor: @escaping((Type) -> Bool)) {
+    func preorder(visitor: @escaping((Type) -> Bool)) {
         if root == nil {
             return
         }
@@ -61,31 +71,31 @@ class BinaryTree<Type: Comparable> {
     }
     
     // 利用栈迭代遍历
-    func preorderByStack() {
+    func preorderByStack(visitor: ((Type) -> Bool)) {
         guard let root = root else {
             return
         }
-        var stack = [root]
-        print(root.element)
-        while !stack.isEmpty {
-            let node = stack.removeFirst()
-            var left = node.left
-            while left != nil {
-                print(left!.element)
-                stack.append(left!)
-                left = left?.left
+        let stack = Stack<TreeNode<Type>>()
+        stack.push(ele: root)
+        while !stack.isEmpty() {
+            let node = stack.pop()
+            if visitor(node!.element) {
+                break
             }
-            if !stack.isEmpty {
-                let front = stack.last
-                let right = front?.right
-                if let rightOK = right {
-                    print(rightOK.element)
-                }
+            
+            /// 因为是栈结构，先把右子树入栈
+            if let right = node!.right {
+                stack.push(ele: right)
+            }
+            
+            /// 左子树后入栈，再去栈顶元素时先访问左子树
+            if let left = node!.left {
+                stack.push(ele: left)
             }
         }
     }
     
-    public func inorder(visitor: @escaping((Type) -> Bool)) {
+    func inorder(visitor: @escaping((Type) -> Bool)) {
         if root == nil {
             return
         }
@@ -93,7 +103,24 @@ class BinaryTree<Type: Comparable> {
         inorder(visitor: visitor, node: root)
     }
     
-    public func postorder(visitor: @escaping((Type) -> Bool)) {
+    func inorderByStack(visitor: ((Type) -> Bool)) {
+        var node = root
+        let stack = Stack<TreeNode<Type>>()
+        while !stack.isEmpty() || node != nil {
+            if let nodeOK = node {
+                stack.push(ele: nodeOK)
+                node = nodeOK.left
+            } else {
+                node = stack.pop()
+                if visitor(node!.element) {
+                    break
+                }
+                node = node?.right
+            }
+        }
+    }
+    
+    func postorder(visitor: ((Type) -> Bool)) {
         if root == nil {
             return
         }
@@ -102,7 +129,36 @@ class BinaryTree<Type: Comparable> {
         postorder(visitor: visitor, node: root)
     }
     
-    public func levelOrder(visitor: @escaping((Type) -> Bool)) {
+    func postorderByStack(visitor: ((Type) -> Bool)) {
+        guard let root = root else {
+            return
+        }
+        
+        let stack1 = Stack<TreeNode<Type>>()
+        let stack2 = Stack<TreeNode<Type>>()
+        
+        stack1.push(ele: root)
+        while !stack1.isEmpty() {
+            let node = stack1.pop()
+            
+            stack2.push(ele: node!)
+            if let left = node?.left {
+                stack1.push(ele: left)
+            }
+            if let right = node?.right {
+                stack1.push(ele: right)
+            }
+        }
+        
+        while !stack2.isEmpty() {
+            let node = stack2.pop()
+            if visitor(node!.element) {
+                break
+            }
+        }
+    }
+    
+    func levelOrder(visitor: @escaping((Type) -> Bool)) {
         if root == nil { return }
         var queue = [root]
         while !queue.isEmpty {
@@ -121,7 +177,7 @@ class BinaryTree<Type: Comparable> {
         }
     }
     
-    public func isComplete() -> Bool {
+    func isComplete() -> Bool {
         if root == nil { return false }
         var queue = [root]
         
@@ -146,8 +202,8 @@ class BinaryTree<Type: Comparable> {
     }
     
     
-    public func height() -> UInt {
-        if root == nil { return 0 }
+    func height() -> UInt {
+        guard let root = root else { return 0 }
         
         // 树的高度
         var height: UInt = 0
@@ -159,11 +215,11 @@ class BinaryTree<Type: Comparable> {
             let node = queue.removeFirst()
             levelSize -= 1
             
-            if let left = node?.left {
+            if let left = node.left {
                 queue.append(left)
             }
             
-            if let right = node?.right {
+            if let right = node.right {
                 queue.append(right)
             }
             
@@ -176,16 +232,18 @@ class BinaryTree<Type: Comparable> {
         return height
     }
     
-    public func height2() -> UInt {
+    func height2() -> UInt {
         return height(node: root)
     }
     
     
     
     private func height(node: TreeNode<Type>?) -> UInt {
-        if node == nil { return 0 }
-        let leftH = height(node: node?.left)
-        let rightH = height(node: node?.right)
+        guard let node = node else {
+            return 0
+        }
+        let leftH = height(node: node.left)
+        let rightH = height(node: node.right)
         return 1 + max(leftH, rightH)
     }
 

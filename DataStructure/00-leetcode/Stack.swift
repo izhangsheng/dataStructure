@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Stack<Type: Equal> {
+class Stack<Type: Comparable> {
     private let list: ArrayList = ArrayList<Type>(capacity: 100)
     
     func clear() {

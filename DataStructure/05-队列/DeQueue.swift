@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DeQueue<T: Equal> {
+class DeQueue<T: Comparable> {
     private let list = LinkedList<T>(first: nil, last: nil)
     
     func size() -> Int {

@@ -8,11 +8,7 @@
 
 import Foundation
 
-public protocol Equal {
-    func compare(v2: Self?, compareClosure: @escaping() -> Bool) -> Bool
-}
-
-public class ArrayList<Element: Equal> {
+public class ArrayList<Element: Comparable> {
     /// 元素的数量
     private var _size: Int = 0
     
@@ -85,9 +81,11 @@ public extension ArrayList {
     
     func contain(obj: Element?) -> Bool {
         for e in elements {
-            return e?.compare(v2: obj, compareClosure: { () -> Bool in
-                true
-            }) ?? false
+            if e == obj {
+                return true
+            } else {
+                return false
+            }
         }
         return false
     }
@@ -121,9 +119,7 @@ public extension ArrayList {
     
     func indexOf(obj: Element?) -> Int {
         for i in 0 ..< _size {
-            if obj!.compare(v2: elements[i], compareClosure: { () -> Bool in
-                true
-            }) {
+            if elements[i] == obj {
                 return i
             }
         }

@@ -27,6 +27,7 @@
 		179D0A66239949850056C8D3 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A65239949850056C8D3 /* BinaryTree.swift */; };
 		179D0A68239D0A010056C8D3 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A67239D0A010056C8D3 /* BinarySearchTree.swift */; };
 		179D0A6A239D30A40056C8D3 /* 226_翻转二叉树.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A69239D30A40056C8D3 /* 226_翻转二叉树.swift */; };
+		17A059C623BE1AAB00DCFC1B /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A059C523BE1AAB00DCFC1B /* AVLTree.swift */; };
 		17E6A9F3237AFBA300998187 /* Fib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6A9F2237AFBA300998187 /* Fib.swift */; };
 		17E6A9F5237B01BE00998187 /* BigO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6A9F4237B01BE00998187 /* BigO.swift */; };
 		17EF58CB23818D8B0049B9F1 /* SingleCircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58CA23818D8B0049B9F1 /* SingleCircleLinkedList.swift */; };
@@ -83,6 +84,7 @@
 		179D0A65239949850056C8D3 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		179D0A67239D0A010056C8D3 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		179D0A69239D30A40056C8D3 /* 226_翻转二叉树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "226_翻转二叉树.swift"; sourceTree = "<group>"; };
+		17A059C523BE1AAB00DCFC1B /* AVLTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
 		17E6A9F2237AFBA300998187 /* Fib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fib.swift; sourceTree = "<group>"; };
 		17E6A9F4237B01BE00998187 /* BigO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigO.swift; sourceTree = "<group>"; };
 		17EF58CA23818D8B0049B9F1 /* SingleCircleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCircleLinkedList.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		17E6A9FD237B066F00998187 /* 07-AVL树 */ = {
 			isa = PBXGroup;
 			children = (
+				17A059C523BE1AAB00DCFC1B /* AVLTree.swift */,
 			);
 			path = "07-AVL树";
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A059C623BE1AAB00DCFC1B /* AVLTree.swift in Sources */,
 				173399AE2361F10100C8FEBC /* ViewController.swift in Sources */,
 				17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */,
 				17545421236896C6008BB626 /* ListNode.swift in Sources */,
