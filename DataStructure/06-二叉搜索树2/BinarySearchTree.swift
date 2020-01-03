@@ -12,7 +12,7 @@ public class BinarySearchTree<E: Comparable>: BinaryTree<E> {
     func add(ele: E) {
         elementNotNullCheck(ele: ele)
         // 添加第一个节点
-        if root == nil {
+        guard let _ = root else {
             root = TreeNode(element: ele, parent: nil)
             count += 1
             
@@ -23,8 +23,8 @@ public class BinarySearchTree<E: Comparable>: BinaryTree<E> {
         
         // 添加的不是第一个节点
         // 找到父节点
-        var parent = root;
-        var curNode = root;
+        var parent = root
+        var curNode = root
         var isParentLeft = false
         while curNode != nil {
             parent = curNode

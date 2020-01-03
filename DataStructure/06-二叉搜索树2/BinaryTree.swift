@@ -26,6 +26,16 @@ public class TreeNode<Type: Comparable> {
     func hasTwoChildren() -> Bool {
         (left != nil && right != nil)
     }
+    
+    func isLeftChild() -> Bool {
+        guard let leftOK = left else { return false }
+        return leftOK === left
+    }
+    
+    func isRightChild() -> Bool {
+        guard let rightOK = right else { return false }
+        return rightOK === right
+    }
 }
 
 extension TreeNode: Comparable {
@@ -80,7 +90,7 @@ public class BinaryTree<Type: Comparable> {
         while !stack.isEmpty() {
             let node = stack.pop()
             if visitor(node!.element) {
-                break
+                return
             }
             
             /// 因为是栈结构，先把右子树入栈
@@ -113,7 +123,7 @@ public class BinaryTree<Type: Comparable> {
             } else {
                 node = stack.pop()
                 if visitor(node!.element) {
-                    break
+                    return
                 }
                 node = node?.right
             }
@@ -153,7 +163,7 @@ public class BinaryTree<Type: Comparable> {
         while !stack2.isEmpty() {
             let node = stack2.pop()
             if visitor(node!.element) {
-                break
+                return
             }
         }
     }
