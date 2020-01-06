@@ -28,13 +28,13 @@ public class TreeNode<Type: Comparable> {
     }
     
     func isLeftChild() -> Bool {
-        guard let leftOK = left else { return false }
-        return leftOK === left
+        guard let _ = left else { return false }
+        return true
     }
     
     func isRightChild() -> Bool {
-        guard let rightOK = right else { return false }
-        return rightOK === right
+        guard let _ = right else { return false }
+        return true
     }
 }
 

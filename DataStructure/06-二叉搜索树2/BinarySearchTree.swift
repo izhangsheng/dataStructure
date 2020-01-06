@@ -17,7 +17,7 @@ public class BinarySearchTree<E: Comparable>: BinaryTree<E> {
             count += 1
             
             /// 新添加加点后的处理
-            afterAdd(node: root!)
+            fixAfterAdd(node: root!)
             return
         }
         
@@ -48,12 +48,12 @@ public class BinarySearchTree<E: Comparable>: BinaryTree<E> {
         count += 1
         
         /// 新添加加点后的处理
-        afterAdd(node: newNode)
+        fixAfterAdd(node: newNode)
     }
     
     /// 添加之后保持二叉搜索树的平衡的逻辑交给avl树去处理
     /// - Parameter node: 添加的节点
-    func afterAdd(node: TreeNode<E>) {  }
+    func fixAfterAdd(node: TreeNode<E>) {  }
 
     func remove(ele: E) {
         remove(node: node(ele: ele))
@@ -62,7 +62,7 @@ public class BinarySearchTree<E: Comparable>: BinaryTree<E> {
     
     /// 删除之后保持二叉搜索树的平衡的逻辑交给avl树去处理
     /// - Parameter node: 删除的节点
-    func afterRemove(node: TreeNode<E>) {  }
+    func fixAfterRemove(node: TreeNode<E>) {  }
 
     func contains(ele: E) -> Bool {
         return node(ele: ele) != nil
@@ -121,12 +121,12 @@ fileprivate extension BinarySearchTree {
             }
             
             /// 删除节点后的处理
-            afterRemove(node: node)
+            fixAfterRemove(node: node)
         } else if node.parent == nil { // node是叶子节点且是跟节点
             root = nil
             
             /// 删除节点后的处理
-            afterRemove(node: node)
+            fixAfterRemove(node: node)
         } else { // node是叶子节点，但不是根节点
             if node === node.parent?.left {
                 node.parent?.left = nil
@@ -135,7 +135,7 @@ fileprivate extension BinarySearchTree {
             }
             
             /// 删除节点后的处理
-            afterRemove(node: node)
+            fixAfterRemove(node: node)
         }
     }
 }
