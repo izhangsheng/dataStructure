@@ -36,6 +36,16 @@ public class TreeNode<Type: Comparable> {
         guard let _ = right else { return false }
         return true
     }
+    
+    func sibling() -> TreeNode<Type>? {
+        if isLeftChild() {
+            return self.parent?.right
+        } else if isRightChild() {
+            return self.parent?.left
+        } else {
+            return nil
+        }
+    }
 }
 
 extension TreeNode: Comparable {

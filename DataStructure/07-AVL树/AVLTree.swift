@@ -9,7 +9,7 @@
 import Foundation
 
 public class AVLTree<Type: Comparable>: BBSTree<Type> {
-    override func fixAfterAdd(node: TreeNode<Type>) {
+    override func fixAfterAdd(node: TreeNode<Type>?) {
         var parent: TreeNode<Type>? = node
         
         while (parent != nil) {
@@ -26,7 +26,7 @@ public class AVLTree<Type: Comparable>: BBSTree<Type> {
         }
     }
     
-    override func fixAfterRemove(node: TreeNode<Type>) {
+    override func fixAfterRemove(node: TreeNode<Type>?) {
         var parent: TreeNode<Type>? = node
         
         while (parent != nil) {
@@ -60,7 +60,7 @@ public class AVLTree<Type: Comparable>: BBSTree<Type> {
         updateHeight(node: f)
     }
     
-    private class AVLNode<Type: Comparable>: TreeNode<Type> {
+    class AVLNode<Type: Comparable>: TreeNode<Type> {
         var height: UInt = 1
         
         func balanceFator() -> Int {

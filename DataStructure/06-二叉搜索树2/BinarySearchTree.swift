@@ -17,7 +17,7 @@ public class BinarySearchTree<E: Comparable>: BinaryTree<E> {
             count += 1
             
             /// 新添加加点后的处理
-            fixAfterAdd(node: root!)
+            fixAfterAdd(node: root)
             return
         }
         
@@ -53,7 +53,7 @@ public class BinarySearchTree<E: Comparable>: BinaryTree<E> {
     
     /// 添加之后保持二叉搜索树的平衡的逻辑交给avl树去处理
     /// - Parameter node: 添加的节点
-    func fixAfterAdd(node: TreeNode<E>) {  }
+    func fixAfterAdd(node: TreeNode<E>?) {  }
 
     func remove(ele: E) {
         remove(node: node(ele: ele))
@@ -62,7 +62,7 @@ public class BinarySearchTree<E: Comparable>: BinaryTree<E> {
     
     /// 删除之后保持二叉搜索树的平衡的逻辑交给avl树去处理
     /// - Parameter node: 删除的节点
-    func fixAfterRemove(node: TreeNode<E>) {  }
+    func fixAfterRemove(node: TreeNode<E>?) {  }
 
     func contains(ele: E) -> Bool {
         return node(ele: ele) != nil
