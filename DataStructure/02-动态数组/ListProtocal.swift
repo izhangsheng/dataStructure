@@ -86,10 +86,6 @@ extension List {
             outOfBounds(idx: idx)
         }
     }
-    
-    
-    
-    
 }
 
 public protocol Comparetor {

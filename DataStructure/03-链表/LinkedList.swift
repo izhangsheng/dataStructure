@@ -45,7 +45,7 @@ public class LinkedList<T>: List {
         getNode(idx: idx)?.data
     }
     
-    public func set(ele: T?, idx: Int) -> T? {
+    @discardableResult public func set(ele: T?, idx: Int) -> T? {
         let curNode = getNode(idx: idx)
         let oldData = curNode?.data
         curNode?.data = ele
@@ -83,7 +83,7 @@ public class LinkedList<T>: List {
         count += 1
     }
     
-    public func remove(idx: Int) -> T? {
+    @discardableResult public func remove(idx: Int) -> T? {
             rangeOfCheck(idx: idx)
             
             let node = getNode(idx: idx)
