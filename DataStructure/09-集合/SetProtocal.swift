@@ -16,5 +16,5 @@ protocol SetProtocal {
     func contain(ele: Element) -> Bool
     func add(ele: Element) -> Void
     func remove(ele: Element) -> Void
-    func traversal(visitor: ((Element) -> Bool))
+    func traversal(visitor: @escaping((Element) -> Bool))
 }

@@ -64,10 +64,9 @@ public class BinarySearchTree<E: Comparable>: BinaryTree<E> {
     /// - Parameter node: 删除的节点
     func fixAfterRemove(node: TreeNode<E>?) {  }
 
-    func contains(ele: E) -> Bool {
+    func contain(ele: E) -> Bool {
         return node(ele: ele) != nil
     }
-    
 }
 
 fileprivate extension BinarySearchTree {

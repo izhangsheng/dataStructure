@@ -46,7 +46,7 @@ class ListSet<T: Comparable>: SetProtocal {
         }
     }
     
-    func traversal(visitor: ((T) -> Bool)) {
+    func traversal(visitor: @escaping((T) -> Bool)) {
         for i in 0 ..< size()  {
             let ele = list.get(idx: i)
             if let ele = ele {

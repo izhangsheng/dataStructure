@@ -85,7 +85,6 @@ public class BinaryTree<Type: Comparable> {
         if root == nil {
             return
         }
-        if visitor(root!.element) { return }
         
         preorder(visitor: visitor, node: root)
     }
@@ -119,7 +118,6 @@ public class BinaryTree<Type: Comparable> {
         if root == nil {
             return
         }
-        if visitor(root!.element) { return }
         inorder(visitor: visitor, node: root)
     }
     
@@ -144,7 +142,6 @@ public class BinaryTree<Type: Comparable> {
         if root == nil {
             return
         }
-        if visitor(root!.element) { return }
         
         postorder(visitor: visitor, node: root)
     }

@@ -34,5 +34,5 @@ public func reverseList2(head: BidirectionalNode<Int>?) -> BidirectionalNode<Int
         newHead = next
         cur = next
     }
-    return cur
+    return newHead
 }
