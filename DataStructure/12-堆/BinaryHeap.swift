@@ -77,31 +77,33 @@ public class BinaryHeap<Type> where Type: Comparable {
 private extension BinaryHeap {
     /// 批量建堆
     func heapify() {
-//        for i in 0 ..< count {
+//        for i in 1 ..< count {
 //            siftUp(i)
 //        }
-        let end = count >> 1 - 1
-        for i in 0 ..< end {
-            siftDown(i)
+        var end = count >> 1 - 1
+        while end >= 0 {
+            siftDown(end)
+            end -= 1
         }
     }
     
     /// 自上而下的上虑
     /// - Parameter index: 下标
     func siftUp(_ index: Int) {
-//        E e = elements[index];
-//        while (index > 0) {
-//            int pindex = (index - 1) >> 1;
-//            E p = elements[pindex];
-//            if (compare(e, p) <= 0) return;
+//        var newIndex = index
+//        let element = elements[newIndex]
+//        while newIndex > 0 {
+//            let parentIndex = (newIndex - 1) >> 1
+//            let parent = elements[parentIndex]
+//            if element < parent { break }
 //
-//            // 交换index、pindex位置的内容
-//            E tmp = elements[index];
-//            elements[index] = elements[pindex];
-//            elements[pindex] = tmp;
+//            // 交换index、parentIndex位置的内容
+//            let tmp = elements[newIndex]
+//            elements[newIndex] = elements[parentIndex];
+//            elements[parentIndex] = tmp
 //
 //            // 重新赋值index
-//            index = pindex;
+//            newIndex = parentIndex
 //        }
         var newIndex = index
         let element = elements[newIndex]
