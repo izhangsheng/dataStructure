@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171F970623D43AA400BF427C /* 20_有效的括号.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F970523D43AA400BF427C /* 20_有效的括号.swift */; };
+		171F970823D5427F00BF427C /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F970723D5427F00BF427C /* Sort.swift */; };
+		171F970A23D5761000BF427C /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F970923D5761000BF427C /* SelectionSort.swift */; };
+		171F970C23D5933400BF427C /* BubbleSort1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F970B23D5933400BF427C /* BubbleSort1.swift */; };
+		171F970E23D5AD6800BF427C /* BubbleSort2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F970D23D5AD6800BF427C /* BubbleSort2.swift */; };
+		171F971023D5AEB900BF427C /* BubbleSort3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F970F23D5AEB900BF427C /* BubbleSort3.swift */; };
+		171F971223D5B48500BF427C /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F971123D5B48500BF427C /* HeapSort.swift */; };
 		173399AA2361F10100C8FEBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399A92361F10100C8FEBC /* AppDelegate.swift */; };
 		173399AC2361F10100C8FEBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399AB2361F10100C8FEBC /* SceneDelegate.swift */; };
 		173399AE2361F10100C8FEBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399AD2361F10100C8FEBC /* ViewController.swift */; };
@@ -15,8 +22,6 @@
 		173399B62361F10200C8FEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173399B42361F10200C8FEBC /* LaunchScreen.storyboard */; };
 		173399C12361F10200C8FEBC /* DataStructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399C02361F10200C8FEBC /* DataStructureTests.swift */; };
 		173399CC2361F10200C8FEBC /* DataStructureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399CB2361F10200C8FEBC /* DataStructureUITests.swift */; };
-		173399DC2361FAE500C8FEBC /* DynamicArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399DB2361FAE500C8FEBC /* DynamicArray.swift */; };
-		17545421236896C6008BB626 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17545420236896C6008BB626 /* ListNode.swift */; };
 		17970141237DA02900BE0FBC /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17970140237DA02900BE0FBC /* ArrayList.swift */; };
 		1797014323804AD100BE0FBC /* ListProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1797014223804AD100BE0FBC /* ListProtocal.swift */; };
 		17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17970144238052A200BE0FBC /* ArrayOfList.swift */; };
@@ -74,6 +79,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171F970523D43AA400BF427C /* 20_有效的括号.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "20_有效的括号.swift"; sourceTree = "<group>"; };
+		171F970723D5427F00BF427C /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		171F970923D5761000BF427C /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
+		171F970B23D5933400BF427C /* BubbleSort1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort1.swift; sourceTree = "<group>"; };
+		171F970D23D5AD6800BF427C /* BubbleSort2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort2.swift; sourceTree = "<group>"; };
+		171F970F23D5AEB900BF427C /* BubbleSort3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort3.swift; sourceTree = "<group>"; };
+		171F971123D5B48500BF427C /* HeapSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapSort.swift; sourceTree = "<group>"; };
 		173399A62361F10100C8FEBC /* DataStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		173399A92361F10100C8FEBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		173399AB2361F10100C8FEBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,8 +100,6 @@
 		173399C72361F10200C8FEBC /* DataStructureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173399CB2361F10200C8FEBC /* DataStructureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureUITests.swift; sourceTree = "<group>"; };
 		173399CD2361F10200C8FEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		173399DB2361FAE500C8FEBC /* DynamicArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArray.swift; sourceTree = "<group>"; };
-		17545420236896C6008BB626 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		17970140237DA02900BE0FBC /* ArrayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayList.swift; sourceTree = "<group>"; };
 		1797014223804AD100BE0FBC /* ListProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocal.swift; sourceTree = "<group>"; };
 		17970144238052A200BE0FBC /* ArrayOfList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOfList.swift; sourceTree = "<group>"; };
@@ -197,8 +207,6 @@
 				173399A92361F10100C8FEBC /* AppDelegate.swift */,
 				173399AB2361F10100C8FEBC /* SceneDelegate.swift */,
 				173399AD2361F10100C8FEBC /* ViewController.swift */,
-				173399DB2361FAE500C8FEBC /* DynamicArray.swift */,
-				17545420236896C6008BB626 /* ListNode.swift */,
 				173399B42361F10200C8FEBC /* LaunchScreen.storyboard */,
 				173399B22361F10200C8FEBC /* Assets.xcassets */,
 				173399B72361F10200C8FEBC /* Info.plist */,
@@ -298,6 +306,12 @@
 		17CD85D023CF0C3100E645DA /* 15-排序 */ = {
 			isa = PBXGroup;
 			children = (
+				171F970723D5427F00BF427C /* Sort.swift */,
+				171F970923D5761000BF427C /* SelectionSort.swift */,
+				171F970B23D5933400BF427C /* BubbleSort1.swift */,
+				171F970D23D5AD6800BF427C /* BubbleSort2.swift */,
+				171F970F23D5AEB900BF427C /* BubbleSort3.swift */,
+				171F971123D5B48500BF427C /* HeapSort.swift */,
 			);
 			path = "15-排序";
 			sourceTree = "<group>";
@@ -369,6 +383,7 @@
 				17EF58D32381A8890049B9F1 /* 237_删除链表中的节点.swift */,
 				17EF58D9238C145F0049B9F1 /* 82_删除链表中的重复元素.swift */,
 				179D0A69239D30A40056C8D3 /* 226_翻转二叉树.swift */,
+				171F970523D43AA400BF427C /* 20_有效的括号.swift */,
 			);
 			path = "00-leetcode";
 			sourceTree = "<group>";
@@ -505,29 +520,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A059C623BE1AAB00DCFC1B /* AVLTree.swift in Sources */,
+				171F970E23D5AD6800BF427C /* BubbleSort2.swift in Sources */,
 				173399AE2361F10100C8FEBC /* ViewController.swift in Sources */,
 				17CD85B723CC67D300E645DA /* MapProtocal.swift in Sources */,
 				17CD85CF23CF0A4000E645DA /* Trie.swift in Sources */,
 				17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */,
-				17545421236896C6008BB626 /* ListNode.swift in Sources */,
 				179D0A6A239D30A40056C8D3 /* 226_翻转二叉树.swift in Sources */,
 				17CD85A723CC45E000E645DA /* SetProtocal.swift in Sources */,
 				179D0A66239949850056C8D3 /* BinaryTree.swift in Sources */,
 				17A059C823C30CD800DCFC1B /* BBSTree.swift in Sources */,
 				17EF58D02381A85C0049B9F1 /* 141_环形链表.swift in Sources */,
 				17E6A9F3237AFBA300998187 /* Fib.swift in Sources */,
+				171F970C23D5933400BF427C /* BubbleSort1.swift in Sources */,
+				171F970823D5427F00BF427C /* Sort.swift in Sources */,
 				179D0A62239548990056C8D3 /* CircleQueue.swift in Sources */,
 				173399AA2361F10100C8FEBC /* AppDelegate.swift in Sources */,
+				171F971223D5B48500BF427C /* HeapSort.swift in Sources */,
 				17EF58D8238978FF0049B9F1 /* Queue.swift in Sources */,
 				173399AC2361F10100C8FEBC /* SceneDelegate.swift in Sources */,
 				17CD85B923CC6A8E00E645DA /* TreeMap.swift in Sources */,
 				17CD85C323CDBE7200E645DA /* HashSet.swift in Sources */,
 				17EF58CB23818D8B0049B9F1 /* SingleCircleLinkedList.swift in Sources */,
+				171F971023D5AEB900BF427C /* BubbleSort3.swift in Sources */,
 				179D0A602395457B0056C8D3 /* DeQueue.swift in Sources */,
 				17970141237DA02900BE0FBC /* ArrayList.swift in Sources */,
 				17CD85CD23CF064000E645DA /* PriorityQueue.swift in Sources */,
 				17EF58CD23819D960049B9F1 /* BidirectionalCircleLinkedList.swift in Sources */,
+				171F970A23D5761000BF427C /* SelectionSort.swift in Sources */,
 				17E6A9F5237B01BE00998187 /* BigO.swift in Sources */,
+				171F970623D43AA400BF427C /* 20_有效的括号.swift in Sources */,
 				17EF58DA238C145F0049B9F1 /* 82_删除链表中的重复元素.swift in Sources */,
 				1797014323804AD100BE0FBC /* ListProtocal.swift in Sources */,
 				17CD85C523CDBEAE00E645DA /* HeapProtocal.swift in Sources */,
@@ -541,7 +562,6 @@
 				17CD85C723CDBEBF00E645DA /* BinaryHeap.swift in Sources */,
 				17CD85A623CC45E000E645DA /* ListSet.swift in Sources */,
 				17CD85BF23CDBE3800E645DA /* HashMap.swift in Sources */,
-				173399DC2361FAE500C8FEBC /* DynamicArray.swift in Sources */,
 				179D0A68239D0A010056C8D3 /* BinarySearchTree.swift in Sources */,
 				17EF58D42381A8890049B9F1 /* 237_删除链表中的节点.swift in Sources */,
 				179D0A642396AC110056C8D3 /* CircleDeQueue.swift in Sources */,

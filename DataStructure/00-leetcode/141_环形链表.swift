@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CheckCircleLinkedList {
+public class CheckCircleLinkedList {
     func hasCircle(head: BidirectionalNode<Int>?) -> Bool {
         if head == nil || head?.next == nil {
             return false

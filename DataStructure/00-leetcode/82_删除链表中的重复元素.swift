@@ -7,37 +7,47 @@
 //
 
 import Foundation
-
-func deleteDuplicates(head: ListNode?) -> ListNode? {
-    guard head != nil, head?.next != nil else {
-        return head
+public class ListNode<Element> {
+    public var val: Int
+    public var next: ListNode<Element>?
+    public init(_ val: Int) {
+        self.val = val
+        self.next = nil
     }
-    /// 虚拟头节点
-    let fakeHead: ListNode? = ListNode(0)
-    fakeHead?.next = head
-
-    var prevNode = fakeHead
-    var slow = prevNode?.next
-    var fast = slow?.next
-
-    while slow != nil, fast != nil {
-        var hasMatchOnce = false
-        while slow != nil, fast != nil, slow!.val == fast!.val {
-            // 往后顺延
-            fast = fast?.next
-            hasMatchOnce = true
-        }
-
-        if hasMatchOnce {
-            prevNode?.next = fast
-        } else {
-            prevNode = slow
-        }
-        
-        slow = fast
-        fast = fast?.next
-    }
-
-
-    return fakeHead?.next
 }
+
+public class DeleteDuplicateForLinkedList {
+    func deleteDuplicates(head: ListNode<Int>?) -> ListNode<Int>? {
+        guard head != nil, head?.next != nil else {
+            return head
+        }
+        /// 虚拟头节点
+        let fakeHead: ListNode? = ListNode<Int>(0)
+        fakeHead?.next = head
+
+        var prevNode = fakeHead
+        var slow = prevNode?.next
+        var fast = slow?.next
+
+        while slow != nil, fast != nil {
+            var hasMatchOnce = false
+            while slow != nil, fast != nil, slow!.val == fast!.val {
+                // 往后顺延
+                fast = fast?.next
+                hasMatchOnce = true
+            }
+
+            if hasMatchOnce {
+                prevNode?.next = fast
+            } else {
+                prevNode = slow
+            }
+            
+            slow = fast
+            fast = fast?.next
+        }
+
+        return fakeHead?.next
+    }
+}
+

@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+public class DeleteNodeForLinkedlist {
+    public func deleteNode(withNode node: ListNode<Int>) {
+        node.next = node.next?.next
+        node.val = node.next?.next?.val ?? 0
+    }
+}

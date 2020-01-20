@@ -8,31 +8,33 @@
 
 import Foundation
 
-public func reverseList(head: BidirectionalNode<Int>?) -> BidirectionalNode<Int>? {
-    if head == nil || head?.next == nil {
-        return head
+public class ReverseLinkedList {
+    public func reverseListByRecursive(head: BidirectionalNode<Int>?) -> BidirectionalNode<Int>? {
+        if head == nil || head?.next == nil {
+            return head
+        }
+        
+        let newHead = reverseListByRecursive(head: head?.next)
+        head?.next?.next = head
+        head?.next = nil
+        
+        return newHead
     }
-    
-    let newHead = reverseList(head: head?.next)
-    head?.next?.next = head
-    head?.next = nil
-    
-    return newHead
-}
 
-public func reverseList2(head: BidirectionalNode<Int>?) -> BidirectionalNode<Int>? {
-    if head == nil || head?.next == nil {
-        return head
+    public func reverseListByIterator(head: BidirectionalNode<Int>?) -> BidirectionalNode<Int>? {
+        if head == nil || head?.next == nil {
+            return head
+        }
+        
+        var newHead: BidirectionalNode<Int>? = nil
+        var cur = head
+        
+        while cur != nil {
+            let next = cur?.next
+            next?.next = newHead
+            newHead = next
+            cur = next
+        }
+        return newHead
     }
-    
-    var newHead: BidirectionalNode<Int>? = nil
-    var cur = head
-    
-    while cur != nil {
-        let next = cur?.next
-        next?.next = newHead
-        newHead = next
-        cur = next
-    }
-    return newHead
 }
