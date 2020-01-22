@@ -16,21 +16,20 @@ class HeapSort<T: Comparable>: Sort<T> {
         
         // 原地建堆
         var end = heapSize >> 1 - 1
-        while end > 0 {
+        while end >= 0 {
             siftDown(end)
             end -= 1
         }
         
         while heapSize > 1 {
             // 交换堆顶元素和尾部元素
-            swap(i1: 0, i2: heapSize)
+            swap(i1: 0, i2: heapSize - 1)
 
+            heapSize -= 1
+            
             // 对0位置进行siftDown（恢复堆的性质）
             siftDown(0)
-            
-            heapSize -= 1
         }
-        
     }
     
     /// 自下而上的下虑
@@ -74,6 +73,3 @@ class HeapSort<T: Comparable>: Sort<T> {
         array[newIdx] = element
     }
 }
-
-
-

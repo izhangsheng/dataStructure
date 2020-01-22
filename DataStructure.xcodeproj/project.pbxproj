@@ -22,6 +22,12 @@
 		173399B62361F10200C8FEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173399B42361F10200C8FEBC /* LaunchScreen.storyboard */; };
 		173399C12361F10200C8FEBC /* DataStructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399C02361F10200C8FEBC /* DataStructureTests.swift */; };
 		173399CC2361F10200C8FEBC /* DataStructureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399CB2361F10200C8FEBC /* DataStructureUITests.swift */; };
+		17819FDE23D6945F0091EC01 /* InsertionSort1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FDD23D6945F0091EC01 /* InsertionSort1.swift */; };
+		17819FE023D694690091EC01 /* InsertionSort2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FDF23D694690091EC01 /* InsertionSort2.swift */; };
+		17819FE223D694730091EC01 /* InsertionSort3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FE123D694730091EC01 /* InsertionSort3.swift */; };
+		17819FE423D6C9BC0091EC01 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FE323D6C9BC0091EC01 /* MergeSort.swift */; };
+		17819FE623D6DF990091EC01 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FE523D6DF990091EC01 /* QuickSort.swift */; };
+		17819FE823D830730091EC01 /* ShellSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FE723D830730091EC01 /* ShellSort.swift */; };
 		17970141237DA02900BE0FBC /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17970140237DA02900BE0FBC /* ArrayList.swift */; };
 		1797014323804AD100BE0FBC /* ListProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1797014223804AD100BE0FBC /* ListProtocal.swift */; };
 		17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17970144238052A200BE0FBC /* ArrayOfList.swift */; };
@@ -100,6 +106,12 @@
 		173399C72361F10200C8FEBC /* DataStructureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173399CB2361F10200C8FEBC /* DataStructureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureUITests.swift; sourceTree = "<group>"; };
 		173399CD2361F10200C8FEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17819FDD23D6945F0091EC01 /* InsertionSort1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort1.swift; sourceTree = "<group>"; };
+		17819FDF23D694690091EC01 /* InsertionSort2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort2.swift; sourceTree = "<group>"; };
+		17819FE123D694730091EC01 /* InsertionSort3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort3.swift; sourceTree = "<group>"; };
+		17819FE323D6C9BC0091EC01 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
+		17819FE523D6DF990091EC01 /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
+		17819FE723D830730091EC01 /* ShellSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellSort.swift; sourceTree = "<group>"; };
 		17970140237DA02900BE0FBC /* ArrayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayList.swift; sourceTree = "<group>"; };
 		1797014223804AD100BE0FBC /* ListProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocal.swift; sourceTree = "<group>"; };
 		17970144238052A200BE0FBC /* ArrayOfList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOfList.swift; sourceTree = "<group>"; };
@@ -312,6 +324,12 @@
 				171F970D23D5AD6800BF427C /* BubbleSort2.swift */,
 				171F970F23D5AEB900BF427C /* BubbleSort3.swift */,
 				171F971123D5B48500BF427C /* HeapSort.swift */,
+				17819FDD23D6945F0091EC01 /* InsertionSort1.swift */,
+				17819FDF23D694690091EC01 /* InsertionSort2.swift */,
+				17819FE123D694730091EC01 /* InsertionSort3.swift */,
+				17819FE323D6C9BC0091EC01 /* MergeSort.swift */,
+				17819FE523D6DF990091EC01 /* QuickSort.swift */,
+				17819FE723D830730091EC01 /* ShellSort.swift */,
 			);
 			path = "15-排序";
 			sourceTree = "<group>";
@@ -522,6 +540,8 @@
 				17A059C623BE1AAB00DCFC1B /* AVLTree.swift in Sources */,
 				171F970E23D5AD6800BF427C /* BubbleSort2.swift in Sources */,
 				173399AE2361F10100C8FEBC /* ViewController.swift in Sources */,
+				17819FE423D6C9BC0091EC01 /* MergeSort.swift in Sources */,
+				17819FE823D830730091EC01 /* ShellSort.swift in Sources */,
 				17CD85B723CC67D300E645DA /* MapProtocal.swift in Sources */,
 				17CD85CF23CF0A4000E645DA /* Trie.swift in Sources */,
 				17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */,
@@ -535,6 +555,7 @@
 				171F970823D5427F00BF427C /* Sort.swift in Sources */,
 				179D0A62239548990056C8D3 /* CircleQueue.swift in Sources */,
 				173399AA2361F10100C8FEBC /* AppDelegate.swift in Sources */,
+				17819FE023D694690091EC01 /* InsertionSort2.swift in Sources */,
 				171F971223D5B48500BF427C /* HeapSort.swift in Sources */,
 				17EF58D8238978FF0049B9F1 /* Queue.swift in Sources */,
 				173399AC2361F10100C8FEBC /* SceneDelegate.swift in Sources */,
@@ -543,6 +564,7 @@
 				17EF58CB23818D8B0049B9F1 /* SingleCircleLinkedList.swift in Sources */,
 				171F971023D5AEB900BF427C /* BubbleSort3.swift in Sources */,
 				179D0A602395457B0056C8D3 /* DeQueue.swift in Sources */,
+				17819FE223D694730091EC01 /* InsertionSort3.swift in Sources */,
 				17970141237DA02900BE0FBC /* ArrayList.swift in Sources */,
 				17CD85CD23CF064000E645DA /* PriorityQueue.swift in Sources */,
 				17EF58CD23819D960049B9F1 /* BidirectionalCircleLinkedList.swift in Sources */,
@@ -554,10 +576,12 @@
 				17CD85C523CDBEAE00E645DA /* HeapProtocal.swift in Sources */,
 				17CD85A223CC45C700E645DA /* Stack.swift in Sources */,
 				17CD85CB23CEDD5500E645DA /* SequenceAndIterator.swift in Sources */,
+				17819FDE23D6945F0091EC01 /* InsertionSort1.swift in Sources */,
 				17CD85B523CC4D1E00E645DA /* TreeSet.swift in Sources */,
 				17CD85C923CDBECB00E645DA /* Heap.swift in Sources */,
 				17970147238063CA00BE0FBC /* LinkedList.swift in Sources */,
 				17CD85C123CDBE5A00E645DA /* LinkedHashMap.swift in Sources */,
+				17819FE623D6DF990091EC01 /* QuickSort.swift in Sources */,
 				17CD85AD23CC4A3300E645DA /* RedBlackTree.swift in Sources */,
 				17CD85C723CDBEBF00E645DA /* BinaryHeap.swift in Sources */,
 				17CD85A623CC45E000E645DA /* ListSet.swift in Sources */,
