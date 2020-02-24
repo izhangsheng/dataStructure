@@ -27,9 +27,11 @@ public class BinarySearchTree<E: Comparable>: BinaryTree<E> {
         var curNode = root
         var isParentLeft = false
         while curNode != nil {
+            /// 找到最后一个curNode有值时
             parent = curNode
             if ele > curNode!.element {
                 curNode = curNode?.right
+                isParentLeft = false
             } else if ele < curNode!.element {
                 isParentLeft = true
                 curNode = curNode?.left
