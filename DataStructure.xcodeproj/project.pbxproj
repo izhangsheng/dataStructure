@@ -22,6 +22,7 @@
 		173399B62361F10200C8FEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173399B42361F10200C8FEBC /* LaunchScreen.storyboard */; };
 		173399C12361F10200C8FEBC /* DataStructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399C02361F10200C8FEBC /* DataStructureTests.swift */; };
 		173399CC2361F10200C8FEBC /* DataStructureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399CB2361F10200C8FEBC /* DataStructureUITests.swift */; };
+		177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */; };
 		17819FDE23D6945F0091EC01 /* InsertionSort1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FDD23D6945F0091EC01 /* InsertionSort1.swift */; };
 		17819FE023D694690091EC01 /* InsertionSort2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FDF23D694690091EC01 /* InsertionSort2.swift */; };
 		17819FE223D694730091EC01 /* InsertionSort3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FE123D694730091EC01 /* InsertionSort3.swift */; };
@@ -108,6 +109,7 @@
 		173399C72361F10200C8FEBC /* DataStructureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173399CB2361F10200C8FEBC /* DataStructureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureUITests.swift; sourceTree = "<group>"; };
 		173399CD2361F10200C8FEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
 		17819FDD23D6945F0091EC01 /* InsertionSort1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort1.swift; sourceTree = "<group>"; };
 		17819FDF23D694690091EC01 /* InsertionSort2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort2.swift; sourceTree = "<group>"; };
 		17819FE123D694730091EC01 /* InsertionSort3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort3.swift; sourceTree = "<group>"; };
@@ -219,6 +221,8 @@
 				17CD85B223CC4B2300E645DA /* 13-优先级队列 */,
 				17CD85B323CC4B2A00E645DA /* 14-Trie */,
 				17CD85D023CF0C3100E645DA /* 15-排序 */,
+				177A1B452406B9330035BDD5 /* 递归 */,
+				177A1B4B240CA8310035BDD5 /* 动态规划 */,
 				173399AB2361F10100C8FEBC /* SceneDelegate.swift */,
 				173399AF2361F10100C8FEBC /* Main.storyboard */,
 				173399A92361F10100C8FEBC /* AppDelegate.swift */,
@@ -246,6 +250,21 @@
 				173399CD2361F10200C8FEBC /* Info.plist */,
 			);
 			path = DataStructureUITests;
+			sourceTree = "<group>";
+		};
+		177A1B452406B9330035BDD5 /* 递归 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "递归";
+			sourceTree = "<group>";
+		};
+		177A1B4B240CA8310035BDD5 /* 动态规划 */ = {
+			isa = PBXGroup;
+			children = (
+				177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */,
+			);
+			path = "动态规划";
 			sourceTree = "<group>";
 		};
 		17CD85A023CC45C700E645DA /* 04-栈 */ = {
@@ -598,6 +617,7 @@
 				17EF58D42381A8890049B9F1 /* 237_删除链表中的节点.swift in Sources */,
 				179D0A642396AC110056C8D3 /* CircleDeQueue.swift in Sources */,
 				17EF58D22381A8770049B9F1 /* 206_翻转链表.swift in Sources */,
+				177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

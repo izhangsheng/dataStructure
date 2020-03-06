@@ -13,16 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        var label = UILabel()
-//        label.text = "哈哈"
-//        let label_UnsafeMutableRawPointer = Unmanaged.passUnretained(label).toOpaque()
-//        let label_unsafeBitCast_Int = unsafeBitCast(label, to: Int.self)
-//        let with_raw_label = withUnsafeMutablePointer(to: &label) { (wp) -> Int in
-//            return Int(bitPattern: wp)
-//        }
-        
-        
+        test()
     }
+    
+    func test() {
+        let count = lcs(str1: "aocdfve", str2: "pmcdfe")
+        print(count)
+    }
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         var arr = [Int]()
