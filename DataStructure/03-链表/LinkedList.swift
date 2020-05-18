@@ -8,6 +8,15 @@
 
 import Foundation
 
+public class ListNode<Element> {
+    public var val: Int
+    public var next: ListNode<Element>?
+    public init(_ val: Int) {
+        self.val = val
+        self.next = nil
+    }
+}
+
 public class BidirectionalNode<T>: Comparetor {
     public typealias T = T
     

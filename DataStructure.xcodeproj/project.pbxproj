@@ -59,15 +59,13 @@
 		17CD85CB23CEDD5500E645DA /* SequenceAndIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85CA23CEDD5500E645DA /* SequenceAndIterator.swift */; };
 		17CD85CD23CF064000E645DA /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85CC23CF064000E645DA /* PriorityQueue.swift */; };
 		17CD85CF23CF0A4000E645DA /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85CE23CF0A4000E645DA /* Trie.swift */; };
+		17DDF3202472DEF300413D82 /* _链表_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DDF31F2472DEF300413D82 /* _链表_.swift */; };
+		17DDF3222472E39500413D82 /* _数组排序_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DDF3212472E39500413D82 /* _数组排序_.swift */; };
 		17E6A9F3237AFBA300998187 /* Fib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6A9F2237AFBA300998187 /* Fib.swift */; };
 		17E6A9F5237B01BE00998187 /* BigO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6A9F4237B01BE00998187 /* BigO.swift */; };
 		17EF58CB23818D8B0049B9F1 /* SingleCircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58CA23818D8B0049B9F1 /* SingleCircleLinkedList.swift */; };
 		17EF58CD23819D960049B9F1 /* BidirectionalCircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58CC23819D960049B9F1 /* BidirectionalCircleLinkedList.swift */; };
-		17EF58D02381A85C0049B9F1 /* 141_环形链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58CF2381A85C0049B9F1 /* 141_环形链表.swift */; };
-		17EF58D22381A8770049B9F1 /* 206_翻转链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58D12381A8770049B9F1 /* 206_翻转链表.swift */; };
-		17EF58D42381A8890049B9F1 /* 237_删除链表中的节点.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58D32381A8890049B9F1 /* 237_删除链表中的节点.swift */; };
 		17EF58D8238978FF0049B9F1 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58D7238978FF0049B9F1 /* Queue.swift */; };
-		17EF58DA238C145F0049B9F1 /* 82_删除链表中的重复元素.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58D9238C145F0049B9F1 /* 82_删除链表中的重复元素.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,15 +144,13 @@
 		17CD85CA23CEDD5500E645DA /* SequenceAndIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceAndIterator.swift; sourceTree = "<group>"; };
 		17CD85CC23CF064000E645DA /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 		17CD85CE23CF0A4000E645DA /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
+		17DDF31F2472DEF300413D82 /* _链表_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_链表_.swift"; sourceTree = "<group>"; };
+		17DDF3212472E39500413D82 /* _数组排序_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_数组排序_.swift"; sourceTree = "<group>"; };
 		17E6A9F2237AFBA300998187 /* Fib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fib.swift; sourceTree = "<group>"; };
 		17E6A9F4237B01BE00998187 /* BigO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigO.swift; sourceTree = "<group>"; };
 		17EF58CA23818D8B0049B9F1 /* SingleCircleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCircleLinkedList.swift; sourceTree = "<group>"; };
 		17EF58CC23819D960049B9F1 /* BidirectionalCircleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidirectionalCircleLinkedList.swift; sourceTree = "<group>"; };
-		17EF58CF2381A85C0049B9F1 /* 141_环形链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "141_环形链表.swift"; sourceTree = "<group>"; };
-		17EF58D12381A8770049B9F1 /* 206_翻转链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "206_翻转链表.swift"; sourceTree = "<group>"; };
-		17EF58D32381A8890049B9F1 /* 237_删除链表中的节点.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "237_删除链表中的节点.swift"; sourceTree = "<group>"; };
 		17EF58D7238978FF0049B9F1 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
-		17EF58D9238C145F0049B9F1 /* 82_删除链表中的重复元素.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "82_删除链表中的重复元素.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,12 +417,10 @@
 		17EF58CE2381A82C0049B9F1 /* 00-leetcode */ = {
 			isa = PBXGroup;
 			children = (
-				17EF58CF2381A85C0049B9F1 /* 141_环形链表.swift */,
-				17EF58D12381A8770049B9F1 /* 206_翻转链表.swift */,
-				17EF58D32381A8890049B9F1 /* 237_删除链表中的节点.swift */,
-				17EF58D9238C145F0049B9F1 /* 82_删除链表中的重复元素.swift */,
 				179D0A69239D30A40056C8D3 /* 226_翻转二叉树.swift */,
 				171F970523D43AA400BF427C /* 20_有效的括号.swift */,
+				17DDF31F2472DEF300413D82 /* _链表_.swift */,
+				17DDF3212472E39500413D82 /* _数组排序_.swift */,
 			);
 			path = "00-leetcode";
 			sourceTree = "<group>";
@@ -572,9 +566,9 @@
 				17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */,
 				179D0A6A239D30A40056C8D3 /* 226_翻转二叉树.swift in Sources */,
 				17CD85A723CC45E000E645DA /* SetProtocal.swift in Sources */,
+				17DDF3202472DEF300413D82 /* _链表_.swift in Sources */,
 				179D0A66239949850056C8D3 /* BinaryTree.swift in Sources */,
 				17A059C823C30CD800DCFC1B /* BBSTree.swift in Sources */,
-				17EF58D02381A85C0049B9F1 /* 141_环形链表.swift in Sources */,
 				17E6A9F3237AFBA300998187 /* Fib.swift in Sources */,
 				171F970C23D5933400BF427C /* BubbleSort1.swift in Sources */,
 				171F970823D5427F00BF427C /* Sort.swift in Sources */,
@@ -598,7 +592,6 @@
 				171F970A23D5761000BF427C /* SelectionSort.swift in Sources */,
 				17E6A9F5237B01BE00998187 /* BigO.swift in Sources */,
 				171F970623D43AA400BF427C /* 20_有效的括号.swift in Sources */,
-				17EF58DA238C145F0049B9F1 /* 82_删除链表中的重复元素.swift in Sources */,
 				1797014323804AD100BE0FBC /* ListProtocal.swift in Sources */,
 				17CD85C523CDBEAE00E645DA /* HeapProtocal.swift in Sources */,
 				17CD85A223CC45C700E645DA /* Stack.swift in Sources */,
@@ -613,10 +606,9 @@
 				17CD85C723CDBEBF00E645DA /* BinaryHeap.swift in Sources */,
 				17CD85A623CC45E000E645DA /* ListSet.swift in Sources */,
 				17CD85BF23CDBE3800E645DA /* HashMap.swift in Sources */,
+				17DDF3222472E39500413D82 /* _数组排序_.swift in Sources */,
 				179D0A68239D0A010056C8D3 /* BinarySearchTree.swift in Sources */,
-				17EF58D42381A8890049B9F1 /* 237_删除链表中的节点.swift in Sources */,
 				179D0A642396AC110056C8D3 /* CircleDeQueue.swift in Sources */,
-				17EF58D22381A8770049B9F1 /* 206_翻转链表.swift in Sources */,
 				177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
