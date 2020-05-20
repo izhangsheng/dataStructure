@@ -66,6 +66,9 @@
 		17EF58CB23818D8B0049B9F1 /* SingleCircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58CA23818D8B0049B9F1 /* SingleCircleLinkedList.swift */; };
 		17EF58CD23819D960049B9F1 /* BidirectionalCircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58CC23819D960049B9F1 /* BidirectionalCircleLinkedList.swift */; };
 		17EF58D8238978FF0049B9F1 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF58D7238978FF0049B9F1 /* Queue.swift */; };
+		17FBDB86247576AE0003EF0C /* 42_接雨水.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBDB85247576AE0003EF0C /* 42_接雨水.swift */; };
+		17FBDB88247581520003EF0C /* 239_滑动窗口最大值.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBDB87247581520003EF0C /* 239_滑动窗口最大值.swift */; };
+		17FBDB8A247584380003EF0C /* 739_每日温度.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBDB89247584380003EF0C /* 739_每日温度.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +154,9 @@
 		17EF58CA23818D8B0049B9F1 /* SingleCircleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCircleLinkedList.swift; sourceTree = "<group>"; };
 		17EF58CC23819D960049B9F1 /* BidirectionalCircleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidirectionalCircleLinkedList.swift; sourceTree = "<group>"; };
 		17EF58D7238978FF0049B9F1 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		17FBDB85247576AE0003EF0C /* 42_接雨水.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "42_接雨水.swift"; sourceTree = "<group>"; };
+		17FBDB87247581520003EF0C /* 239_滑动窗口最大值.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "239_滑动窗口最大值.swift"; sourceTree = "<group>"; };
+		17FBDB89247584380003EF0C /* 739_每日温度.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "739_每日温度.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,6 +427,9 @@
 				171F970523D43AA400BF427C /* 20_有效的括号.swift */,
 				17DDF31F2472DEF300413D82 /* _链表_.swift */,
 				17DDF3212472E39500413D82 /* _数组排序_.swift */,
+				17FBDB85247576AE0003EF0C /* 42_接雨水.swift */,
+				17FBDB87247581520003EF0C /* 239_滑动窗口最大值.swift */,
+				17FBDB89247584380003EF0C /* 739_每日温度.swift */,
 			);
 			path = "00-leetcode";
 			sourceTree = "<group>";
@@ -557,6 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A059C623BE1AAB00DCFC1B /* AVLTree.swift in Sources */,
+				17FBDB8A247584380003EF0C /* 739_每日温度.swift in Sources */,
 				171F970E23D5AD6800BF427C /* BubbleSort2.swift in Sources */,
 				173399AE2361F10100C8FEBC /* ViewController.swift in Sources */,
 				17819FE423D6C9BC0091EC01 /* MergeSort.swift in Sources */,
@@ -583,6 +593,7 @@
 				17CD85C323CDBE7200E645DA /* HashSet.swift in Sources */,
 				17EF58CB23818D8B0049B9F1 /* SingleCircleLinkedList.swift in Sources */,
 				171F971023D5AEB900BF427C /* BubbleSort3.swift in Sources */,
+				17FBDB86247576AE0003EF0C /* 42_接雨水.swift in Sources */,
 				179D0A602395457B0056C8D3 /* DeQueue.swift in Sources */,
 				17819FE223D694730091EC01 /* InsertionSort3.swift in Sources */,
 				17970141237DA02900BE0FBC /* ArrayList.swift in Sources */,
@@ -594,6 +605,7 @@
 				171F970623D43AA400BF427C /* 20_有效的括号.swift in Sources */,
 				1797014323804AD100BE0FBC /* ListProtocal.swift in Sources */,
 				17CD85C523CDBEAE00E645DA /* HeapProtocal.swift in Sources */,
+				17FBDB88247581520003EF0C /* 239_滑动窗口最大值.swift in Sources */,
 				17CD85A223CC45C700E645DA /* Stack.swift in Sources */,
 				17CD85CB23CEDD5500E645DA /* SequenceAndIterator.swift in Sources */,
 				17819FDE23D6945F0091EC01 /* InsertionSort1.swift in Sources */,
