@@ -133,3 +133,24 @@ func selectGoods(_ values: [Int], _ weights: [Int], _ capacity: Int) -> Int {
     }
     return dp[values.count][capacity]
 }
+
+/**
+ * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
+ */
+class _121买卖股票最佳时机_ {
+    func maxProfit(_ prices: [Int]) -> Int {
+        if prices.isEmpty { return 0 }
+        // 前面扫描过的最小价格
+        var minPrice = prices[0]
+        // 前面扫描过的最大利润
+        var maxProfit = 0
+        for i in 1 ..< prices.count {
+            if prices[i] < minPrice {
+                minPrice = prices[i]
+            } else { // 把第i天的股票卖出
+                maxProfit = max(maxProfit, prices[i] - minPrice)
+            }
+        }
+        return maxProfit
+    }
+}

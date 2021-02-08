@@ -19,7 +19,7 @@ class Stack<Type: Comparable> {
         list.add(ele)
     }
     
-    func pop() -> Type? {
+    @discardableResult func pop() -> Type? {
         list.remove(at: list.size() - 1)
     }
     
