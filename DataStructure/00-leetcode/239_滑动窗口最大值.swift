@@ -16,7 +16,7 @@ public class _239_滑动窗口最大值 {
         if nums.isEmpty || k < 1 { return [0] }
         if k == 1 { return nums }
         var maxes = [Int]()
-        // 当前滑动窗口的最大值索引
+        // 当前滑动窗口的最大值索引（默认为0）
         var maxIdx = 0
         // 求出前k个元素的最大值索引
         for i in 1 ..< k {

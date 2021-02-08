@@ -41,6 +41,11 @@
 		179D0A6A239D30A40056C8D3 /* 226_翻转二叉树.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D0A69239D30A40056C8D3 /* 226_翻转二叉树.swift */; };
 		17A059C623BE1AAB00DCFC1B /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A059C523BE1AAB00DCFC1B /* AVLTree.swift */; };
 		17A059C823C30CD800DCFC1B /* BBSTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A059C723C30CD800DCFC1B /* BBSTree.swift */; };
+		17AA1767249DADB300D3C9CA /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA1766249DADB300D3C9CA /* UnionFind.swift */; };
+		17AA1769249DB0E100D3C9CA /* UnionFind_QF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA1768249DB0E100D3C9CA /* UnionFind_QF.swift */; };
+		17AA176B249DB52A00D3C9CA /* UnionFind_QU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA176A249DB52A00D3C9CA /* UnionFind_QU.swift */; };
+		17AA176D249DB7ED00D3C9CA /* UnionFind_QU_S.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA176C249DB7EC00D3C9CA /* UnionFind_QU_S.swift */; };
+		17AA176F249DB95400D3C9CA /* UnionFind_QU_R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA176E249DB95400D3C9CA /* UnionFind_QU_R.swift */; };
 		17C40F2124039C11006DC7B8 /* CountingSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C40F2024039C11006DC7B8 /* CountingSort.swift */; };
 		17C40F2324039C1F006DC7B8 /* RadixSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C40F2224039C1F006DC7B8 /* RadixSort.swift */; };
 		17CD85A223CC45C700E645DA /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85A123CC45C700E645DA /* Stack.swift */; };
@@ -129,6 +134,11 @@
 		179D0A69239D30A40056C8D3 /* 226_翻转二叉树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "226_翻转二叉树.swift"; sourceTree = "<group>"; };
 		17A059C523BE1AAB00DCFC1B /* AVLTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
 		17A059C723C30CD800DCFC1B /* BBSTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBSTree.swift; sourceTree = "<group>"; };
+		17AA1766249DADB300D3C9CA /* UnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind.swift; sourceTree = "<group>"; };
+		17AA1768249DB0E100D3C9CA /* UnionFind_QF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QF.swift; sourceTree = "<group>"; };
+		17AA176A249DB52A00D3C9CA /* UnionFind_QU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU.swift; sourceTree = "<group>"; };
+		17AA176C249DB7EC00D3C9CA /* UnionFind_QU_S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_S.swift; sourceTree = "<group>"; };
+		17AA176E249DB95400D3C9CA /* UnionFind_QU_R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_R.swift; sourceTree = "<group>"; };
 		17C40F2024039C11006DC7B8 /* CountingSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingSort.swift; sourceTree = "<group>"; };
 		17C40F2224039C1F006DC7B8 /* RadixSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadixSort.swift; sourceTree = "<group>"; };
 		17CD85A123CC45C700E645DA /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -225,6 +235,7 @@
 				17CD85D023CF0C3100E645DA /* 15-排序 */,
 				177A1B452406B9330035BDD5 /* 递归 */,
 				177A1B4B240CA8310035BDD5 /* 动态规划 */,
+				17AA1765249DACB300D3C9CA /* 16并查集 */,
 				173399AB2361F10100C8FEBC /* SceneDelegate.swift */,
 				173399AF2361F10100C8FEBC /* Main.storyboard */,
 				173399A92361F10100C8FEBC /* AppDelegate.swift */,
@@ -267,6 +278,18 @@
 				177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */,
 			);
 			path = "动态规划";
+			sourceTree = "<group>";
+		};
+		17AA1765249DACB300D3C9CA /* 16并查集 */ = {
+			isa = PBXGroup;
+			children = (
+				17AA1766249DADB300D3C9CA /* UnionFind.swift */,
+				17AA1768249DB0E100D3C9CA /* UnionFind_QF.swift */,
+				17AA176A249DB52A00D3C9CA /* UnionFind_QU.swift */,
+				17AA176C249DB7EC00D3C9CA /* UnionFind_QU_S.swift */,
+				17AA176E249DB95400D3C9CA /* UnionFind_QU_R.swift */,
+			);
+			path = "16并查集";
 			sourceTree = "<group>";
 		};
 		17CD85A023CC45C700E645DA /* 04-栈 */ = {
@@ -565,16 +588,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17AA1767249DADB300D3C9CA /* UnionFind.swift in Sources */,
 				17A059C623BE1AAB00DCFC1B /* AVLTree.swift in Sources */,
 				17FBDB8A247584380003EF0C /* 739_每日温度.swift in Sources */,
 				171F970E23D5AD6800BF427C /* BubbleSort2.swift in Sources */,
+				17AA176D249DB7ED00D3C9CA /* UnionFind_QU_S.swift in Sources */,
 				173399AE2361F10100C8FEBC /* ViewController.swift in Sources */,
 				17819FE423D6C9BC0091EC01 /* MergeSort.swift in Sources */,
 				17819FE823D830730091EC01 /* ShellSort.swift in Sources */,
 				17CD85B723CC67D300E645DA /* MapProtocal.swift in Sources */,
+				17AA176B249DB52A00D3C9CA /* UnionFind_QU.swift in Sources */,
 				17CD85CF23CF0A4000E645DA /* Trie.swift in Sources */,
 				17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */,
 				179D0A6A239D30A40056C8D3 /* 226_翻转二叉树.swift in Sources */,
+				17AA176F249DB95400D3C9CA /* UnionFind_QU_R.swift in Sources */,
 				17CD85A723CC45E000E645DA /* SetProtocal.swift in Sources */,
 				17DDF3202472DEF300413D82 /* _链表_.swift in Sources */,
 				179D0A66239949850056C8D3 /* BinaryTree.swift in Sources */,
@@ -609,6 +636,7 @@
 				17CD85A223CC45C700E645DA /* Stack.swift in Sources */,
 				17CD85CB23CEDD5500E645DA /* SequenceAndIterator.swift in Sources */,
 				17819FDE23D6945F0091EC01 /* InsertionSort1.swift in Sources */,
+				17AA1769249DB0E100D3C9CA /* UnionFind_QF.swift in Sources */,
 				17CD85B523CC4D1E00E645DA /* TreeSet.swift in Sources */,
 				17CD85C923CDBECB00E645DA /* Heap.swift in Sources */,
 				17970147238063CA00BE0FBC /* LinkedList.swift in Sources */,
