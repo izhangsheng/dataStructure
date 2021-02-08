@@ -14,7 +14,7 @@ class HeapSort<T: Comparable>: Sort<T> {
     override func sort() {
         heapSize = array.count
         
-        // 原地建堆
+        // 原地建堆，end为最后一个拥有子节点在数组中的下标
         var end = heapSize >> 1 - 1
         while end >= 0 {
             siftDown(end)
