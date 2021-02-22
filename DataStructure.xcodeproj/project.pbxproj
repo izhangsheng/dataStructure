@@ -22,6 +22,10 @@
 		173399B62361F10200C8FEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173399B42361F10200C8FEBC /* LaunchScreen.storyboard */; };
 		173399C12361F10200C8FEBC /* DataStructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399C02361F10200C8FEBC /* DataStructureTests.swift */; };
 		173399CC2361F10200C8FEBC /* DataStructureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399CB2361F10200C8FEBC /* DataStructureUITests.swift */; };
+		174D0F5524DFDB98005116CB /* UnionFind_QU_R_PS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174D0F5424DFDB98005116CB /* UnionFind_QU_R_PS.swift */; };
+		174D0F5724DFDE6E005116CB /* UnionFind_QU_R_PH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174D0F5624DFDE6E005116CB /* UnionFind_QU_R_PH.swift */; };
+		174D0F5924DFDF69005116CB /* UnionFind_QU_R_PC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174D0F5824DFDF69005116CB /* UnionFind_QU_R_PC.swift */; };
+		174D0F5B24DFE024005116CB /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174D0F5A24DFE024005116CB /* Graph.swift */; };
 		177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */; };
 		17819FDE23D6945F0091EC01 /* InsertionSort1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FDD23D6945F0091EC01 /* InsertionSort1.swift */; };
 		17819FE023D694690091EC01 /* InsertionSort2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FDF23D694690091EC01 /* InsertionSort2.swift */; };
@@ -46,6 +50,7 @@
 		17AA176B249DB52A00D3C9CA /* UnionFind_QU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA176A249DB52A00D3C9CA /* UnionFind_QU.swift */; };
 		17AA176D249DB7ED00D3C9CA /* UnionFind_QU_S.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA176C249DB7EC00D3C9CA /* UnionFind_QU_S.swift */; };
 		17AA176F249DB95400D3C9CA /* UnionFind_QU_R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA176E249DB95400D3C9CA /* UnionFind_QU_R.swift */; };
+		17AA17BE24B8C20C00D3C9CA /* HandleString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA17BD24B8C20C00D3C9CA /* HandleString.swift */; };
 		17C40F2124039C11006DC7B8 /* CountingSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C40F2024039C11006DC7B8 /* CountingSort.swift */; };
 		17C40F2324039C1F006DC7B8 /* RadixSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C40F2224039C1F006DC7B8 /* RadixSort.swift */; };
 		17CD85A223CC45C700E645DA /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85A123CC45C700E645DA /* Stack.swift */; };
@@ -115,6 +120,10 @@
 		173399C72361F10200C8FEBC /* DataStructureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173399CB2361F10200C8FEBC /* DataStructureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureUITests.swift; sourceTree = "<group>"; };
 		173399CD2361F10200C8FEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		174D0F5424DFDB98005116CB /* UnionFind_QU_R_PS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_R_PS.swift; sourceTree = "<group>"; };
+		174D0F5624DFDE6E005116CB /* UnionFind_QU_R_PH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_R_PH.swift; sourceTree = "<group>"; };
+		174D0F5824DFDF69005116CB /* UnionFind_QU_R_PC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_R_PC.swift; sourceTree = "<group>"; };
+		174D0F5A24DFE024005116CB /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
 		17819FDD23D6945F0091EC01 /* InsertionSort1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort1.swift; sourceTree = "<group>"; };
 		17819FDF23D694690091EC01 /* InsertionSort2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort2.swift; sourceTree = "<group>"; };
@@ -139,6 +148,7 @@
 		17AA176A249DB52A00D3C9CA /* UnionFind_QU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU.swift; sourceTree = "<group>"; };
 		17AA176C249DB7EC00D3C9CA /* UnionFind_QU_S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_S.swift; sourceTree = "<group>"; };
 		17AA176E249DB95400D3C9CA /* UnionFind_QU_R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_R.swift; sourceTree = "<group>"; };
+		17AA17BD24B8C20C00D3C9CA /* HandleString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleString.swift; sourceTree = "<group>"; };
 		17C40F2024039C11006DC7B8 /* CountingSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingSort.swift; sourceTree = "<group>"; };
 		17C40F2224039C1F006DC7B8 /* RadixSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadixSort.swift; sourceTree = "<group>"; };
 		17CD85A123CC45C700E645DA /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -236,11 +246,15 @@
 				177A1B452406B9330035BDD5 /* 递归 */,
 				177A1B4B240CA8310035BDD5 /* 动态规划 */,
 				17AA1765249DACB300D3C9CA /* 16并查集 */,
-				173399AB2361F10100C8FEBC /* SceneDelegate.swift */,
-				173399AF2361F10100C8FEBC /* Main.storyboard */,
+				17AA17B924B8BFED00D3C9CA /* 17图 */,
+				17AA17BA24B8C12200D3C9CA /* 18布隆过滤器 */,
+				17AA17BB24B8C13700D3C9CA /* 调表 */,
+				17AA17BC24B8C14100D3C9CA /* 串 */,
+				173399B42361F10200C8FEBC /* LaunchScreen.storyboard */,
 				173399A92361F10100C8FEBC /* AppDelegate.swift */,
 				173399AD2361F10100C8FEBC /* ViewController.swift */,
-				173399B42361F10200C8FEBC /* LaunchScreen.storyboard */,
+				173399AF2361F10100C8FEBC /* Main.storyboard */,
+				173399AB2361F10100C8FEBC /* SceneDelegate.swift */,
 				173399B22361F10200C8FEBC /* Assets.xcassets */,
 				173399B72361F10200C8FEBC /* Info.plist */,
 			);
@@ -288,8 +302,41 @@
 				17AA176A249DB52A00D3C9CA /* UnionFind_QU.swift */,
 				17AA176C249DB7EC00D3C9CA /* UnionFind_QU_S.swift */,
 				17AA176E249DB95400D3C9CA /* UnionFind_QU_R.swift */,
+				174D0F5424DFDB98005116CB /* UnionFind_QU_R_PS.swift */,
+				174D0F5624DFDE6E005116CB /* UnionFind_QU_R_PH.swift */,
+				174D0F5824DFDF69005116CB /* UnionFind_QU_R_PC.swift */,
 			);
 			path = "16并查集";
+			sourceTree = "<group>";
+		};
+		17AA17B924B8BFED00D3C9CA /* 17图 */ = {
+			isa = PBXGroup;
+			children = (
+				174D0F5A24DFE024005116CB /* Graph.swift */,
+			);
+			path = "17图";
+			sourceTree = "<group>";
+		};
+		17AA17BA24B8C12200D3C9CA /* 18布隆过滤器 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "18布隆过滤器";
+			sourceTree = "<group>";
+		};
+		17AA17BB24B8C13700D3C9CA /* 调表 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "调表";
+			sourceTree = "<group>";
+		};
+		17AA17BC24B8C14100D3C9CA /* 串 */ = {
+			isa = PBXGroup;
+			children = (
+				17AA17BD24B8C20C00D3C9CA /* HandleString.swift */,
+			);
+			path = "串";
 			sourceTree = "<group>";
 		};
 		17CD85A023CC45C700E645DA /* 04-栈 */ = {
@@ -525,6 +572,7 @@
 				TargetAttributes = {
 					173399A52361F10100C8FEBC = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1220;
 					};
 					173399BB2361F10200C8FEBC = {
 						CreatedOnToolsVersion = 11.1;
@@ -591,6 +639,7 @@
 				17AA1767249DADB300D3C9CA /* UnionFind.swift in Sources */,
 				17A059C623BE1AAB00DCFC1B /* AVLTree.swift in Sources */,
 				17FBDB8A247584380003EF0C /* 739_每日温度.swift in Sources */,
+				17AA17BE24B8C20C00D3C9CA /* HandleString.swift in Sources */,
 				171F970E23D5AD6800BF427C /* BubbleSort2.swift in Sources */,
 				17AA176D249DB7ED00D3C9CA /* UnionFind_QU_S.swift in Sources */,
 				173399AE2361F10100C8FEBC /* ViewController.swift in Sources */,
@@ -627,6 +676,7 @@
 				17CD85CD23CF064000E645DA /* PriorityQueue.swift in Sources */,
 				17C40F2124039C11006DC7B8 /* CountingSort.swift in Sources */,
 				17EF58CD23819D960049B9F1 /* BidirectionalCircleLinkedList.swift in Sources */,
+				174D0F5924DFDF69005116CB /* UnionFind_QU_R_PC.swift in Sources */,
 				171F970A23D5761000BF427C /* SelectionSort.swift in Sources */,
 				17E6A9F5237B01BE00998187 /* BigO.swift in Sources */,
 				171F970623D43AA400BF427C /* 20_有效的括号.swift in Sources */,
@@ -639,6 +689,7 @@
 				17AA1769249DB0E100D3C9CA /* UnionFind_QF.swift in Sources */,
 				17CD85B523CC4D1E00E645DA /* TreeSet.swift in Sources */,
 				17CD85C923CDBECB00E645DA /* Heap.swift in Sources */,
+				174D0F5524DFDB98005116CB /* UnionFind_QU_R_PS.swift in Sources */,
 				17970147238063CA00BE0FBC /* LinkedList.swift in Sources */,
 				17CD85C123CDBE5A00E645DA /* LinkedHashMap.swift in Sources */,
 				17819FE623D6DF990091EC01 /* QuickSort.swift in Sources */,
@@ -647,7 +698,9 @@
 				17CD85A623CC45E000E645DA /* ListSet.swift in Sources */,
 				17CD85BF23CDBE3800E645DA /* HashMap.swift in Sources */,
 				17DDF3222472E39500413D82 /* _数组排序_.swift in Sources */,
+				174D0F5B24DFE024005116CB /* Graph.swift in Sources */,
 				179D0A68239D0A010056C8D3 /* BinarySearchTree.swift in Sources */,
+				174D0F5724DFDE6E005116CB /* UnionFind_QU_R_PH.swift in Sources */,
 				179D0A642396AC110056C8D3 /* CircleDeQueue.swift in Sources */,
 				177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */,
 			);
@@ -822,6 +875,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2YPF77FCC;
 				INFOPLIST_FILE = DataStructure/Info.plist;
@@ -831,6 +885,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zs.DataStructure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DataStructure/DataStructure-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -840,6 +896,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2YPF77FCC;
 				INFOPLIST_FILE = DataStructure/Info.plist;
@@ -849,6 +906,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zs.DataStructure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DataStructure/DataStructure-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
