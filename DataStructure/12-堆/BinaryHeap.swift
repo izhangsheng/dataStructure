@@ -90,21 +90,6 @@ private extension BinaryHeap {
     /// 自上而下的上虑
     /// - Parameter index: 下标
     func siftUp(_ index: Int) {
-//        var newIndex = index
-//        let element = elements[newIndex]
-//        while newIndex > 0 {
-//            let parentIndex = (newIndex - 1) >> 1
-//            let parent = elements[parentIndex]
-//            if element < parent { break }
-//
-//            // 交换index、parentIndex位置的内容
-//            let tmp = elements[newIndex]
-//            elements[newIndex] = elements[parentIndex];
-//            elements[parentIndex] = tmp
-//
-//            // 重新赋值index
-//            newIndex = parentIndex
-//        }
         var newIndex = index
         let element = elements[newIndex]
         while newIndex > 0 {

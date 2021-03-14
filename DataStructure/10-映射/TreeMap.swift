@@ -258,7 +258,7 @@ private extension TreeMap {
         let child = parent?.left
         grand.right = child
         parent?.left = grand
-        afterRorate(grand: grand, parent: parent!, child: child)
+        afterRotate(grand: grand, parent: parent!, child: child)
     }
     
     /// 右旋转
@@ -268,7 +268,7 @@ private extension TreeMap {
         let child = parent?.right
         grand.left = child
         parent?.right = grand
-        afterRorate(grand: grand, parent: parent!, child: child)
+        afterRotate(grand: grand, parent: parent!, child: child)
     }
     
     /// 旋转之后的操作
@@ -276,7 +276,7 @@ private extension TreeMap {
     ///   - grand: 祖父节点
     ///   - parent: 父节点
     ///   - child: 子节点
-    func afterRorate(grand: MapNode<Key, Value>, parent: MapNode<Key, Value>, child: MapNode<Key, Value>?) {
+    func afterRotate(grand: MapNode<Key, Value>, parent: MapNode<Key, Value>, child: MapNode<Key, Value>?) {
         // 让parent成为数的跟几点
         parent.parent = grand.parent
         if grand.isLeftChild() {

@@ -17,8 +17,11 @@ class ViewController: UIViewController {
     }
     
     func test() {
-        let count = lcs(str1: "aocdfve", str2: "pmcdfe")
-        print(count)
+//        let count = lcs(str1: "aocdfve", str2: "pmcdfe")
+//        print(count)
+        
+        let res = Permute().permute(nums: [1, 2, 3])
+        print(res)
     }
 
     

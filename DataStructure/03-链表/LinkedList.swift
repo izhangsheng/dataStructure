@@ -9,9 +9,9 @@
 import Foundation
 
 public class ListNode<Element> {
-    public var val: Int
+    public var val: Element
     public var next: ListNode<Element>?
-    public init(_ val: Int) {
+    public init(_ val: Element) {
         self.val = val
         self.next = nil
     }

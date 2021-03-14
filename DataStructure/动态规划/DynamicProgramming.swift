@@ -90,28 +90,22 @@ func maxSubArray(_ numbers: [Int]) -> Int {
 
 /// 找零钱
 /// 假设 dp(n) 是凑到 n 分需要的最少硬币个数
-func coins(_ n: Int) -> Int {
-    // 面值1，5，10，20
-    guard n > 0 else {
-        return -1
+/// coins: 面值数组
+func coinChange(_ coins: [Int], _ amount: Int) -> Int {
+    if amount == 0 {
+        return 0
     }
-    let dp = [Int](repeating: 0, count: n + 1)
-    for i in 1 ... n {
-        var minCount = dp[i - 1]
-        if i >= 5 {
-            minCount = min(minCount, dp[n - 5])
-        }
-        if i >= 1 {
-            minCount = min(minCount, dp[n - 1])
-        }
-        if i >= 10 {
-            minCount = min(minCount, dp[n - 10])
-        }
-        if i >= 20 {
-            minCount = min(minCount, dp[n - 20])
+    var dp = [Int](repeating: amount + 1, count: amount + 1)
+    dp[0] = 0
+    for i in 1 ... amount {
+        for coin in coins {
+            if i < coin {
+                continue // 子问题无解跳过，即dp[i] = amount + 1
+            }
+            dp[i] = min(dp[i], dp[i - coin] + 1)
         }
     }
-    return dp[n]
+    return (dp[amount] > amount) ? -1 : dp[amount]
 }
 
 /// 背包问题
