@@ -61,8 +61,7 @@
 		17CD85B523CC4D1E00E645DA /* TreeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85B423CC4D1E00E645DA /* TreeSet.swift */; };
 		17CD85B723CC67D300E645DA /* MapProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85B623CC67D300E645DA /* MapProtocal.swift */; };
 		17CD85B923CC6A8E00E645DA /* TreeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85B823CC6A8E00E645DA /* TreeMap.swift */; };
-		17CD85BF23CDBE3800E645DA /* HashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85BE23CDBE3800E645DA /* HashMap.swift */; };
-		17CD85C123CDBE5A00E645DA /* LinkedHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85C023CDBE5A00E645DA /* LinkedHashMap.swift */; };
+		17CD85BF23CDBE3800E645DA /* HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85BE23CDBE3800E645DA /* HashTable.swift */; };
 		17CD85C323CDBE7200E645DA /* HashSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85C223CDBE7200E645DA /* HashSet.swift */; };
 		17CD85C723CDBEBF00E645DA /* BinaryHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85C623CDBEBF00E645DA /* BinaryHeap.swift */; };
 		17CD85CB23CEDD5500E645DA /* SequenceAndIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85CA23CEDD5500E645DA /* SequenceAndIterator.swift */; };
@@ -158,8 +157,7 @@
 		17CD85B423CC4D1E00E645DA /* TreeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSet.swift; sourceTree = "<group>"; };
 		17CD85B623CC67D300E645DA /* MapProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProtocal.swift; sourceTree = "<group>"; };
 		17CD85B823CC6A8E00E645DA /* TreeMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMap.swift; sourceTree = "<group>"; };
-		17CD85BE23CDBE3800E645DA /* HashMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashMap.swift; sourceTree = "<group>"; };
-		17CD85C023CDBE5A00E645DA /* LinkedHashMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedHashMap.swift; sourceTree = "<group>"; };
+		17CD85BE23CDBE3800E645DA /* HashTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTable.swift; sourceTree = "<group>"; };
 		17CD85C223CDBE7200E645DA /* HashSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashSet.swift; sourceTree = "<group>"; };
 		17CD85C623CDBEBF00E645DA /* BinaryHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryHeap.swift; sourceTree = "<group>"; };
 		17CD85CA23CEDD5500E645DA /* SequenceAndIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceAndIterator.swift; sourceTree = "<group>"; };
@@ -376,8 +374,7 @@
 		17CD85B023CC4B0B00E645DA /* 11-哈希表 */ = {
 			isa = PBXGroup;
 			children = (
-				17CD85BE23CDBE3800E645DA /* HashMap.swift */,
-				17CD85C023CDBE5A00E645DA /* LinkedHashMap.swift */,
+				17CD85BE23CDBE3800E645DA /* HashTable.swift */,
 			);
 			path = "11-哈希表";
 			sourceTree = "<group>";
@@ -686,13 +683,12 @@
 				17CD85B523CC4D1E00E645DA /* TreeSet.swift in Sources */,
 				174D0F5524DFDB98005116CB /* UnionFind_QU_R_PS.swift in Sources */,
 				17970147238063CA00BE0FBC /* LinkedList.swift in Sources */,
-				17CD85C123CDBE5A00E645DA /* LinkedHashMap.swift in Sources */,
 				17819FE623D6DF990091EC01 /* QuickSort.swift in Sources */,
 				17CD85AD23CC4A3300E645DA /* RedBlackTree.swift in Sources */,
 				1780068525E544D500C68AB4 /* _刷题_.swift in Sources */,
 				17CD85C723CDBEBF00E645DA /* BinaryHeap.swift in Sources */,
 				17CD85A623CC45E000E645DA /* ListSet.swift in Sources */,
-				17CD85BF23CDBE3800E645DA /* HashMap.swift in Sources */,
+				17CD85BF23CDBE3800E645DA /* HashTable.swift in Sources */,
 				17DDF3222472E39500413D82 /* _数组排序_.swift in Sources */,
 				174D0F5B24DFE024005116CB /* ListGraph.swift in Sources */,
 				179D0A68239D0A010056C8D3 /* BinarySearchTree.swift in Sources */,

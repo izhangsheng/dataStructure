@@ -11,7 +11,7 @@ import Foundation
 private let DEFAULT_CAPACITY = 1 << 4;
 private let DEFAULT_LOAD_FACTOR = 0.75
 
-class HashMap<K, V> where K: Hashable, V: Equatable {
+class HashTable<K, V> where K: Hashable, V: Equatable {
     private var count = 0
     private var table: [Node?] = Array(repeating: nil, count: DEFAULT_CAPACITY)
     
@@ -98,7 +98,7 @@ class HashMap<K, V> where K: Hashable, V: Equatable {
     }
 }
 
-extension HashMap: MapProtocal {
+extension HashTable: MapProtocal {
     typealias Key = K
     
     typealias Value = V
@@ -181,7 +181,16 @@ extension HashMap: MapProtocal {
     }
     
     func traversal(visitor: @escaping ((K, V) -> Bool)) {
-        
+        for i in 0 ..< table.count {
+            let head = table[i]
+            if let headNode = head {
+                var curNode: Node? = headNode
+                while curNode != nil {
+                    if visitor(curNode!.key, curNode!.value) { return }
+                    curNode = curNode?.next
+                }
+            }
+        }
     }
     
     func clear() {
