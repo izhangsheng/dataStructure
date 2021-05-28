@@ -28,12 +28,12 @@ public class TreeNode<Type: Comparable> {
     }
     
     func isLeftChild() -> Bool {
-        guard let _ = left else { return false }
+        guard let _ = parent?.left else { return false }
         return true
     }
     
     func isRightChild() -> Bool {
-        guard let _ = right else { return false }
+        guard let _ = parent?.right else { return false }
         return true
     }
     
@@ -200,16 +200,16 @@ public class BinaryTree<Type: Comparable> {
         
         var leaf = false
         while !queue.isEmpty {
-            let ele = queue.removeFirst()
-            if leaf, !ele!.isLeaf() { return false }
+            let node = queue.removeFirst()
+            if leaf, !node!.isLeaf() { return false }
             
-            if let left = ele?.left {
+            if let left = node?.left {
                 queue.append(left)
-            } else if let _ = ele?.right {
+            } else if let _ = node?.right {
                 return false
             }
             
-            if let right = ele?.right {
+            if let right = node?.right {
                 queue.append(right)
             } else {
                 leaf = true
