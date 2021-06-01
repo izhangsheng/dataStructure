@@ -1,5 +1,5 @@
 //
-//  GraphProtocal.swift
+//  GraphBase.swift
 //  DataStructure
 //
 //  Created by zhangsheng on 2021/5/31.
@@ -7,13 +7,6 @@
 //
 
 import Foundation
-
-protocol WeightManager {
-    associatedtype W
-    func compare(_ w1: W, _ w2: W) -> Int
-    func add(_ w1: W, _ w2: W) -> W
-    func zero()
-}
 
 class EdgeInfo<V, W>: Hashable {
     static func == (lhs: EdgeInfo<V, W>, rhs: EdgeInfo<V, W>) -> Bool {
@@ -58,9 +51,9 @@ protocol GraphProtocal {
     
     func edgesSize() -> Int
     func verticesSize() -> Int
-    func addVertex()
+    func addVertex(_ v: V)
     func addEdge(_ from: V, _ to: V)
-    func addEdge(_ from: V, _ to: V, _ weight: W)
+    func addEdge(_ from: V, _ to: V, _ weight: W?)
     func removeVertex(_ v: V)
     func removeEdge(_ from: V, _ to: V)
     

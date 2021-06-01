@@ -8,8 +8,52 @@
 
 import Foundation
 
-class ListGraph<Type, Element> where Type: Hashable {
+public class ListGraph<Type: AnyObject, Element> where Type: Hashable, Element: Comparable {
+    private var vertices: [Type: Vertex] = [:]
+    private var edges: Set<Edge> = []
     
+    
+    private class Vertex: Hashable {
+        var value: V?
+        var inEdges: Set<Edge> = Set()
+        var outEdges: Set<Edge> = Set()
+        
+        init(with value: V) {
+            self.value = value
+        }
+        
+        // MARK: Equatable
+        static func == (lhs: ListGraph<Type, Element>.Vertex, rhs: ListGraph<Type, Element>.Vertex) -> Bool {
+            lhs.value === rhs.value
+        }
+        
+        // MARK: Hashable
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(value)
+        }
+    }
+    
+    private class Edge: Hashable {
+        var from: Vertex
+        var to: Vertex
+        var weight: Element?
+        
+        init(_ from: Vertex, _ to: Vertex) {
+            self.from = from
+            self.to = to
+        }
+        
+        // MARK: Equatable
+        static func == (lhs: ListGraph<Type, Element>.Edge, rhs: ListGraph<Type, Element>.Edge) -> Bool {
+            (lhs.from === rhs.from) && (lhs.to === rhs.to)
+        }
+        
+        // MARK: Hashable
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(from)
+            hasher.combine(to)
+        }
+    }
 }
 
 extension ListGraph: GraphProtocal {
@@ -18,23 +62,49 @@ extension ListGraph: GraphProtocal {
     typealias W = Element
     
     func verticesSize() -> Int {
-        1
+        vertices.count
     }
     
     func edgesSize() -> Int {
-        1
+        edges.count
     }
     
-    func addVertex() {
-        
+    func addVertex(_ v: V) {
+        guard vertices.contains(where: { (key, value) -> Bool in
+            key == v
+        }) else {
+            return
+        }
+        let vertex = ListGraph<Type, Element>.Vertex(with: v)
+        vertices.updateValue(vertex, forKey: v)
     }
     
-    func addEdge(_ from: V, _ to: V) {
-        
+    func addEdge(_ from: Type, _ to: Type) {
+        addEdge(from, to, nil)
     }
     
-    func addEdge(_ from: V, _ to: V, _ weight: W) {
+    func addEdge(_ from: V, _ to: V, _ weight: Element?) {
+        var fromVertex = vertices[from]
+        if fromVertex == nil {
+            fromVertex = ListGraph<Type, Element>.Vertex(with: from)
+            vertices.updateValue(fromVertex!, forKey: from)
+        }
         
+        var toVertex = vertices[to]
+        if toVertex == nil {
+            toVertex = ListGraph<Type, Element>.Vertex(with: to)
+            vertices.updateValue(toVertex!, forKey: to)
+        }
+        
+        let edge = Edge(fromVertex!, toVertex!)
+        edge.weight = weight
+        if let _ = fromVertex?.outEdges.remove(edge) {
+            toVertex?.inEdges.remove(edge)
+            edges.remove(edge)
+        }
+        fromVertex?.outEdges.insert(edge)
+        toVertex?.inEdges.insert(edge)
+        edges.insert(edge)
     }
     
     func removeVertex(_ v: V) {
