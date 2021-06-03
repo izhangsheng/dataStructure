@@ -28,9 +28,9 @@ class EdgeInfo<V, W>: Hashable {
     
     var from: V
     var to: V
-    var weight: W
+    var weight: W?
     
-    init(_ from: V, _ to: V, _ weight: W) {
+    init(_ from: V, _ to: V, _ weight: W?) {
         self.from = from
         self.to = to
         self.weight = weight
@@ -57,8 +57,8 @@ protocol GraphProtocal {
     func removeVertex(_ v: V)
     func removeEdge(_ from: V, _ to: V)
     
-    func bfs(_ begin: V, vistor: ((_ v: V) -> Void))
-    func dfs(_ begin: V, vistor: ((_ v: V) -> Void))
+    func bfs(_ begin: V, vistor: ((_ v: V?) -> Bool))
+    func dfs(_ begin: V, vistor: ((_ v: V?) -> Bool))
     
     /// 最小生成树
     func mst() -> Set<EdgeInfo<V, W>>

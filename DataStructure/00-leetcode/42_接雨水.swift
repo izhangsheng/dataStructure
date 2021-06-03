@@ -41,17 +41,31 @@ class _42_接雨水 {
     }
     
     func trap2(_ height: [Int]) -> Int {
-        if height.isEmpty { return 0 }
-        var lastIdx = height.count - 2
-        // 遍历每一根柱子，看看每一根柱子上能放多少水
-        var water = 0, leftMax = 0;
-        for i in 1 ... lastIdx {
-            leftMax = max(leftMax, height[i - 1])
-            // 求出左边最大、右边最大中的较小者
-            let minValue = min(leftMax, height[i - 1])
-            
+        let count = height.count
+        guard height.count > 2 else {
+            return 0
+        }
+
+        // 每根柱子右边的最大值
+        var rightArray = Array(repeating: 0, count: count)
+        var curIndex = count - 2
+        var rightMax = height.last!
+        while curIndex >= 0 {
+            rightArray[curIndex] = rightMax
+            rightMax = max(rightMax, height[curIndex])
+            curIndex -= 1
         }
         
-        return 0
+        // 遍历每一根柱子，看看每一根柱子上能放多少水
+        var water = 0, leftMax = 0;
+        for i in 1 ..< count {
+            leftMax = max(leftMax, height[i - 1])
+            // 求出左边最大、右边最大中的较小者
+            let minValue = min(leftMax, rightArray[i])
+            let curWater = (minValue - height[i]) > 0 ? minValue - height[i] : 0
+            water += curWater
+        }
+        
+        return water
     }
 }

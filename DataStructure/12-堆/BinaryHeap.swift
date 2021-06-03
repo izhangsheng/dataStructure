@@ -11,11 +11,17 @@ import Foundation
 public class BinaryHeap<Type> where Type: Comparable {
     private var count = 0
     private var elements: [Type]
+    private var isBig: Bool = true
     
-    init(elements: [Type]) {
+    /// 生成二叉堆
+    /// - Parameters:
+    ///   - elements: 元素数组
+    ///   - isBig: 是否是大顶堆
+    init(elements: [Type], isBig: Bool = true) {
         count = elements.count
         // 值得赋值是直接复制
         self.elements = elements
+        self.isBig = isBig
         heapify()
     }
     
@@ -95,7 +101,11 @@ private extension BinaryHeap {
 //        while newIndex > 0 {
 //            let parentIndex = (newIndex - 1) >> 1
 //            let parent = elements[parentIndex]
-//            if element < parent { break }
+//            if isBig {
+//                if element < parent { break }
+//            } else {
+//                if element > parent { break }
+//            }
 //
 //            // 交换index、parentIndex位置的内容
 //            let tmp = elements[newIndex]
@@ -110,7 +120,12 @@ private extension BinaryHeap {
         while newIndex > 0 {
             let parentIndex = (newIndex - 1) >> 1
             let parent = elements[parentIndex]
-            if element < parent { break }
+            if isBig {
+                if element < parent { break }
+            } else {
+                if element > parent { break }
+            }
+            
             
             // 将父元素存储在index位置
             elements[newIndex] = parent
@@ -146,13 +161,21 @@ private extension BinaryHeap {
             let rightChildIdx = childIdx + 1
             let rightChildEle = elements[rightChildIdx]
             
-            // 选出左右子节点最大的那个
-            if (rightChildIdx < count), (rightChildEle > childEle) {
-                childEle = rightChildEle
-                childIdx = rightChildIdx
+            if isBig {
+                if (rightChildIdx < count), (rightChildEle > childEle) {
+                    childEle = rightChildEle
+                    childIdx = rightChildIdx
+                }
+                
+                if element > childEle { break }
+            } else {
+                if (rightChildIdx < count), (rightChildEle < childEle) {
+                    childEle = rightChildEle
+                    childIdx = rightChildIdx
+                }
+                
+                if element < childEle { break }
             }
-            
-            if element > childEle { break }
             
             // 将子节点存放到index位置
             elements[newIdx] = childEle

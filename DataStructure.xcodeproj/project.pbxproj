@@ -22,6 +22,8 @@
 		173399B62361F10200C8FEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173399B42361F10200C8FEBC /* LaunchScreen.storyboard */; };
 		173399C12361F10200C8FEBC /* DataStructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399C02361F10200C8FEBC /* DataStructureTests.swift */; };
 		173399CC2361F10200C8FEBC /* DataStructureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399CB2361F10200C8FEBC /* DataStructureUITests.swift */; };
+		17790F4C2668730B006191AE /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17790F4B2668730B006191AE /* MaxHeap.swift */; };
+		17790F782668D952006191AE /* GenericUnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17790F772668D952006191AE /* GenericUnionFind.swift */; };
 		177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */; };
 		17819FDE23D6945F0091EC01 /* InsertionSort1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FDD23D6945F0091EC01 /* InsertionSort1.swift */; };
 		17819FE023D694690091EC01 /* InsertionSort2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819FDF23D694690091EC01 /* InsertionSort2.swift */; };
@@ -60,9 +62,8 @@
 		17CD85BF23CDBE3800E645DA /* HashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85BE23CDBE3800E645DA /* HashMap.swift */; };
 		17CD85C123CDBE5A00E645DA /* LinkedHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85C023CDBE5A00E645DA /* LinkedHashMap.swift */; };
 		17CD85C323CDBE7200E645DA /* HashSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85C223CDBE7200E645DA /* HashSet.swift */; };
-		17CD85C523CDBEAE00E645DA /* HeapProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85C423CDBEAE00E645DA /* HeapProtocal.swift */; };
 		17CD85C723CDBEBF00E645DA /* BinaryHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85C623CDBEBF00E645DA /* BinaryHeap.swift */; };
-		17CD85C923CDBECB00E645DA /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85C823CDBECB00E645DA /* Heap.swift */; };
+		17CD85C923CDBECB00E645DA /* MinHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85C823CDBECB00E645DA /* MinHeap.swift */; };
 		17CD85CD23CF064000E645DA /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85CC23CF064000E645DA /* PriorityQueue.swift */; };
 		17CD85CF23CF0A4000E645DA /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD85CE23CF0A4000E645DA /* Trie.swift */; };
 		17DDF3202472DEF300413D82 /* _链表_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DDF31F2472DEF300413D82 /* _链表_.swift */; };
@@ -116,6 +117,8 @@
 		173399C72361F10200C8FEBC /* DataStructureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173399CB2361F10200C8FEBC /* DataStructureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureUITests.swift; sourceTree = "<group>"; };
 		173399CD2361F10200C8FEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17790F4B2668730B006191AE /* MaxHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeap.swift; sourceTree = "<group>"; };
+		17790F772668D952006191AE /* GenericUnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericUnionFind.swift; sourceTree = "<group>"; };
 		177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
 		17819FDD23D6945F0091EC01 /* InsertionSort1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort1.swift; sourceTree = "<group>"; };
 		17819FDF23D694690091EC01 /* InsertionSort2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort2.swift; sourceTree = "<group>"; };
@@ -154,9 +157,8 @@
 		17CD85BE23CDBE3800E645DA /* HashMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashMap.swift; sourceTree = "<group>"; };
 		17CD85C023CDBE5A00E645DA /* LinkedHashMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedHashMap.swift; sourceTree = "<group>"; };
 		17CD85C223CDBE7200E645DA /* HashSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashSet.swift; sourceTree = "<group>"; };
-		17CD85C423CDBEAE00E645DA /* HeapProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapProtocal.swift; sourceTree = "<group>"; };
 		17CD85C623CDBEBF00E645DA /* BinaryHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryHeap.swift; sourceTree = "<group>"; };
-		17CD85C823CDBECB00E645DA /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		17CD85C823CDBECB00E645DA /* MinHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinHeap.swift; sourceTree = "<group>"; };
 		17CD85CC23CF064000E645DA /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 		17CD85CE23CF0A4000E645DA /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
 		17DDF31F2472DEF300413D82 /* _链表_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_链表_.swift"; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				17AA176A249DB52A00D3C9CA /* UnionFind_QU.swift */,
 				17AA176C249DB7EC00D3C9CA /* UnionFind_QU_S.swift */,
 				17AA176E249DB95400D3C9CA /* UnionFind_QU_R.swift */,
+				17790F772668D952006191AE /* GenericUnionFind.swift */,
 			);
 			path = "16并查集";
 			sourceTree = "<group>";
@@ -344,8 +347,8 @@
 		17CD85B123CC4B1C00E645DA /* 12-堆 */ = {
 			isa = PBXGroup;
 			children = (
-				17CD85C423CDBEAE00E645DA /* HeapProtocal.swift */,
-				17CD85C823CDBECB00E645DA /* Heap.swift */,
+				17CD85C823CDBECB00E645DA /* MinHeap.swift */,
+				17790F4B2668730B006191AE /* MaxHeap.swift */,
 				17CD85C623CDBEBF00E645DA /* BinaryHeap.swift */,
 			);
 			path = "12-堆";
@@ -523,7 +526,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "张胜";
 				TargetAttributes = {
 					173399A52361F10100C8FEBC = {
@@ -603,6 +606,7 @@
 				17AA176B249DB52A00D3C9CA /* UnionFind_QU.swift in Sources */,
 				17CD85CF23CF0A4000E645DA /* Trie.swift in Sources */,
 				17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */,
+				17790F4C2668730B006191AE /* MaxHeap.swift in Sources */,
 				179D0A6A239D30A40056C8D3 /* 226_翻转二叉树.swift in Sources */,
 				17AA176F249DB95400D3C9CA /* UnionFind_QU_R.swift in Sources */,
 				17CD85A723CC45E000E645DA /* SetProtocal.swift in Sources */,
@@ -636,17 +640,17 @@
 				17E6A9F5237B01BE00998187 /* BigO.swift in Sources */,
 				171F970623D43AA400BF427C /* 20_有效的括号.swift in Sources */,
 				1797014323804AD100BE0FBC /* ListProtocal.swift in Sources */,
-				17CD85C523CDBEAE00E645DA /* HeapProtocal.swift in Sources */,
 				17FBDB88247581520003EF0C /* 239_滑动窗口最大值.swift in Sources */,
 				17CD85A223CC45C700E645DA /* Stack.swift in Sources */,
 				17819FDE23D6945F0091EC01 /* InsertionSort1.swift in Sources */,
 				17AA1769249DB0E100D3C9CA /* UnionFind_QF.swift in Sources */,
 				17CD85B523CC4D1E00E645DA /* TreeSet.swift in Sources */,
-				17CD85C923CDBECB00E645DA /* Heap.swift in Sources */,
+				17CD85C923CDBECB00E645DA /* MinHeap.swift in Sources */,
 				17970147238063CA00BE0FBC /* LinkedList.swift in Sources */,
 				17CD85C123CDBE5A00E645DA /* LinkedHashMap.swift in Sources */,
 				17819FE623D6DF990091EC01 /* QuickSort.swift in Sources */,
 				17CD85AD23CC4A3300E645DA /* RedBlackTree.swift in Sources */,
+				17790F782668D952006191AE /* GenericUnionFind.swift in Sources */,
 				17CD85C723CDBEBF00E645DA /* BinaryHeap.swift in Sources */,
 				17CD85A623CC45E000E645DA /* ListSet.swift in Sources */,
 				17CD85BF23CDBE3800E645DA /* HashMap.swift in Sources */,
@@ -734,6 +738,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -794,6 +799,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

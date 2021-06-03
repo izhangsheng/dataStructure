@@ -27,11 +27,4 @@ public class _739_每日温度_ {
         }
         return result;
     }
-    
-    public func dailyTemperatures2(_ t: [Int]) -> [Int]? {
-        if t.isEmpty { return Array(repeating: 0, count: t.count) }
-        var result = [Int]()
-        
-        return result
-    }
 }
