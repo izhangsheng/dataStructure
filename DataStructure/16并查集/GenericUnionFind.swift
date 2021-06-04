@@ -11,11 +11,11 @@ import Foundation
 public class GenericUnionFind<Type> where Type: Hashable {
     private class Node<V: Equatable> {
         let value: V
-        var parent: GenericUnionFind.Node<V>? = nil
+        var parent: GenericUnionFind.Node<V>!
         var rank = 1
         init(value: V, parent: GenericUnionFind.Node<V>? = nil) {
             self.value = value
-            self.parent = parent
+            self.parent = parent ?? self
         }
     }
     private var nodes = [Type: GenericUnionFind.Node<Type>]()
@@ -57,13 +57,12 @@ public class GenericUnionFind<Type> where Type: Hashable {
     private func findNode(v: Type) -> GenericUnionFind.Node<Type>? {
         let node = nodes[v]
         guard var nodeNotNil = node else { return nil }
-        while let _ = nodeNotNil.parent, nodeNotNil.value != nodeNotNil.parent?.value {
-            nodeNotNil.parent = nodeNotNil.parent?.parent
-            nodeNotNil = nodeNotNil.parent!
+        /// node的parent不是自己
+        while nodeNotNil.value != nodeNotNil.parent.value {
+            nodeNotNil.parent = nodeNotNil.parent.parent
+            nodeNotNil = nodeNotNil.parent
         }
         
         return nodeNotNil
     }
-    
-    
 }

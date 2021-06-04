@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ListGraph<Type: AnyObject, Element> where Type: Hashable, Element: Comparable {
+public class ListGraph<Type, Element> where Type: Hashable, Element: Comparable {
     private var vertices: [Type: Vertex] = [:]
     private var edges: Set<Edge> = []
     
@@ -24,7 +24,7 @@ public class ListGraph<Type: AnyObject, Element> where Type: Hashable, Element: 
         
         // MARK: Equatable
         static func == (lhs: ListGraph<Type, Element>.Vertex, rhs: ListGraph<Type, Element>.Vertex) -> Bool {
-            lhs.value === rhs.value
+            lhs.value == rhs.value
         }
         
         // MARK: Hashable
@@ -35,8 +35,8 @@ public class ListGraph<Type: AnyObject, Element> where Type: Hashable, Element: 
     
     private class Edge: Hashable, Comparable {
         
-        var from: Vertex
-        var to: Vertex
+        let from: Vertex
+        let to: Vertex
         var weight: Element?
         
         init(_ from: Vertex, _ to: Vertex) {
@@ -50,7 +50,7 @@ public class ListGraph<Type: AnyObject, Element> where Type: Hashable, Element: 
         
         // MARK: Equatable
         static func == (lhs: ListGraph<Type, Element>.Edge, rhs: ListGraph<Type, Element>.Edge) -> Bool {
-            (lhs.from === rhs.from) && (lhs.to === rhs.to)
+            (lhs.from == rhs.from) && (lhs.to == rhs.to)
         }
         
         // MARK: Hashable
@@ -81,9 +81,7 @@ extension ListGraph: GraphProtocal {
     }
     
     func addVertex(_ v: V) {
-        guard vertices.contains(where: { (key, value) -> Bool in
-            key == v
-        }) else {
+        guard vertices.keys.contains(v) else {
             return
         }
         let vertex = ListGraph<Type, Element>.Vertex(with: v)
@@ -109,6 +107,7 @@ extension ListGraph: GraphProtocal {
         
         let edge = Edge(fromVertex!, toVertex!)
         edge.weight = weight
+        // 之前存在该边，先删除在添加（更新权重值）
         if let _ = fromVertex?.outEdges.remove(edge) {
             toVertex?.inEdges.remove(edge)
             edges.remove(edge)
@@ -204,7 +203,18 @@ extension ListGraph: GraphProtocal {
     }
     
     /// 拓扑排序
+    /// 有环直接返回空集合
     func topologicalSort() -> [V] {
+        let uf = GenericUnionFind<Vertex>()
+        vertices.values.forEach { (vertex) in
+            uf.makeSet(v: vertex)
+        }
+        for edge in edges {
+            // 产生环
+            if (uf.isSame(v1: edge.from, v2: edge.to)) { return [] }
+            uf.union(v1: edge.from, v2: edge.to)
+        }
+        
         var result = [V]()
         var queue = [Vertex]()
         var ins = [Vertex: Int]()
@@ -282,10 +292,17 @@ extension ListGraph: GraphProtocal {
             return []
         }
         var edgeInfos = Set<EdgeInfo<V, W>>()
-        let minHeap = MinHeap<Edge>(elements: Array(edges))
+        let heap = MinHeap<Edge>(elements: Array(edges))
         let uf = GenericUnionFind<Vertex>()
         vertices.forEach { (key, vertex) in
-            
+            uf.makeSet(v: vertex)
+        }
+        while !heap.isEmpty(), edgeInfos.count < edgeSize {
+            let edge = heap.remove()
+            // 产生环
+            if (uf.isSame(v1: edge!.from, v2: edge!.to)) { continue }
+            edgeInfos.insert(edge!.info())
+            uf.union(v1: edge!.from, v2: edge!.to)
         }
         
         return edgeInfos
@@ -299,5 +316,35 @@ extension ListGraph: GraphProtocal {
 
     func shortestPath() -> [V: [V: PathInfo<V, W>]] {
         return [:]
+    }
+    
+    private func dijkstra(_ begin: V) -> [V: PathInfo<V, W>]? {
+        let beginVertex = vertices[begin]
+        guard let _ = beginVertex else { return nil }
+        
+        var selectedPaths = [V: PathInfo<V, W>]()
+        var paths = [Vertex: PathInfo<V, W>]()
+        paths.updateValue(PathInfo(weight: nil), forKey: beginVertex!)
+        
+        while !paths.isEmpty {
+            
+        }
+        
+        return selectedPaths
+    }
+    
+    private func getMinPath(paths: [Vertex: PathInfo<V, W>]) -> Dictionary<Vertex, PathInfo<V, W>>.Element {
+        
+        var iterator = paths.makeIterator()
+        var minEntry: (key: Vertex, value: PathInfo<V, W>) = iterator.next()!
+        
+        while let next = iterator.next() {
+            
+            if next.value.weight! < minEntry.value.weight! {
+                minEntry = next
+            }
+        }
+        
+        return minEntry
     }
 }

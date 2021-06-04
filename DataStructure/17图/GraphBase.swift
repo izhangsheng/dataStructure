@@ -47,7 +47,7 @@ class PathInfo<V, W> {
 
 protocol GraphProtocal {
     associatedtype V: Hashable
-    associatedtype W
+    associatedtype W: Comparable
     
     func edgesSize() -> Int
     func verticesSize() -> Int
@@ -68,5 +68,4 @@ protocol GraphProtocal {
     /// - Parameter begin: 开始顶点
     func shortestPath(_ begin: V) -> [V: PathInfo<V, W>]
     func shortestPath() -> [V: [V: PathInfo<V, W>]]
-    
 }
