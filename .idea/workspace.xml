@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe3d4825-2c74-4a47-95db-288550f9d47d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DataStructure/16并查集/UnionFind_QU_R_PC.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataStructure/16并查集/UnionFind_QU_R_PH.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataStructure/16并查集/UnionFind_QU_R_PS.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataStructure/17图/Graph.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataStructure/串/HandleString.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructure.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructure.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructure.xcodeproj/project.xcworkspace/xcuserdata/zhangsheng.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructure.xcodeproj/project.xcworkspace/xcuserdata/zhangsheng.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructure/16并查集/UnionFind.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructure/16并查集/UnionFind.swift" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gSYA5tfIFukSQoP60dLubZ0eh5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe3d4825-2c74-4a47-95db-288550f9d47d" name="Default Changelist" comment="" />
+      <created>1598109313773</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598109313773</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="188" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598109981476">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state x="188" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.803@0.23.1440.803" timestamp="1598109981476" />
+    <state x="369" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1598109495231">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state x="369" y="257" key="com.intellij.ide.util.TipDialog/0.23.1440.803@0.23.1440.803" timestamp="1598109495231" />
+  </component>
+</project>
