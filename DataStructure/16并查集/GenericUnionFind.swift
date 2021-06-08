@@ -22,7 +22,9 @@ public class GenericUnionFind<Type> where Type: Hashable {
     
     // MARK: public
     public func makeSet(v: Type) {
-        if nodes.keys.contains(v) { return }
+        guard !nodes.keys.contains(v) else {
+            return
+        }
         nodes.updateValue(GenericUnionFind.Node<Type>(value: v), forKey: v)
     }
     

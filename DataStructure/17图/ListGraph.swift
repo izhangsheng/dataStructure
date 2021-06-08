@@ -8,22 +8,38 @@
 
 import Foundation
 
-public class ListGraph<Type, Element> where Type: Hashable, Element: Comparable {
+public class ListGraph<Type> where Type: Hashable {
     private var vertices: [Type: Vertex] = [:]
     private var edges: Set<Edge> = []
     
+    // MARK: public
+    /// 是否是有向无环图，利用并查集
+    public func isDagByUf() -> Bool {
+        let uf = GenericUnionFind<Vertex>()
+        vertices.values.forEach { v in
+            uf.makeSet(v: v)
+        }
+        
+        for edge in edges {
+            guard !uf.isSame(v1: edge.from, v2: edge.to) else { return false }
+            uf.union(v1: edge.from, v2: edge.to)
+        }
+        
+        return true
+    }
     
+    // MARK: 内部类
     private class Vertex: Hashable {
-        var value: V
+        var value: Type
         var inEdges: Set<Edge> = Set()
         var outEdges: Set<Edge> = Set()
         
-        init(with value: V) {
+        init(with value: Type) {
             self.value = value
         }
         
         // MARK: Equatable
-        static func == (lhs: ListGraph<Type, Element>.Vertex, rhs: ListGraph<Type, Element>.Vertex) -> Bool {
+        static func == (lhs: ListGraph<Type>.Vertex, rhs: ListGraph<Type>.Vertex) -> Bool {
             lhs.value == rhs.value
         }
         
@@ -34,22 +50,21 @@ public class ListGraph<Type, Element> where Type: Hashable, Element: Comparable 
     }
     
     private class Edge: Hashable, Comparable {
-        
         let from: Vertex
         let to: Vertex
-        var weight: Element?
+        var weight: Float = 0
         
         init(_ from: Vertex, _ to: Vertex) {
             self.from = from
             self.to = to
         }
         
-        func info() -> EdgeInfo<Type, Element> {
-            EdgeInfo<Type, Element>(from.value, to.value, weight)
+        func info() -> EdgeInfo<Type> {
+            EdgeInfo<Type>(from.value, to.value, weight)
         }
         
         // MARK: Equatable
-        static func == (lhs: ListGraph<Type, Element>.Edge, rhs: ListGraph<Type, Element>.Edge) -> Bool {
+        static func == (lhs: ListGraph<Type>.Edge, rhs: ListGraph<Type>.Edge) -> Bool {
             (lhs.from == rhs.from) && (lhs.to == rhs.to)
         }
         
@@ -60,18 +75,15 @@ public class ListGraph<Type, Element> where Type: Hashable, Element: Comparable 
         }
         
         // MARK: Comparable
-        static func < (lhs: ListGraph<Type, Element>.Edge, rhs: ListGraph<Type, Element>.Edge) -> Bool {
-            guard let _ = lhs.weight, let _ = rhs.weight else { return false }
-            return lhs.weight! < rhs.weight!
+        static func < (lhs: ListGraph<Type>.Edge, rhs: ListGraph<Type>.Edge) -> Bool {
+            return lhs.weight < rhs.weight
         }
     }
 }
 
 extension ListGraph: GraphProtocal {
     typealias V = Type
-    
-    typealias W = Element
-    
+        
     func verticesSize() -> Int {
         vertices.count
     }
@@ -84,24 +96,23 @@ extension ListGraph: GraphProtocal {
         guard vertices.keys.contains(v) else {
             return
         }
-        let vertex = ListGraph<Type, Element>.Vertex(with: v)
+        let vertex = ListGraph<Type>.Vertex(with: v)
         vertices.updateValue(vertex, forKey: v)
     }
-    
-    func addEdge(_ from: Type, _ to: Type) {
-        addEdge(from, to, nil)
+    func addEdge(_ from: V, _ to: V) {
+        addEdge(from, to, 0)
     }
     
-    func addEdge(_ from: V, _ to: V, _ weight: Element?) {
+    func addEdge(_ from: Type, _ to: Type, _ weight: Float) {
         var fromVertex = vertices[from]
         if fromVertex == nil {
-            fromVertex = ListGraph<Type, Element>.Vertex(with: from)
+            fromVertex = ListGraph<Type>.Vertex(with: from)
             vertices.updateValue(fromVertex!, forKey: from)
         }
         
         var toVertex = vertices[to]
         if toVertex == nil {
-            toVertex = ListGraph<Type, Element>.Vertex(with: to)
+            toVertex = ListGraph<Type>.Vertex(with: to)
             vertices.updateValue(toVertex!, forKey: to)
         }
         
@@ -202,19 +213,8 @@ extension ListGraph: GraphProtocal {
         }
     }
     
-    /// 拓扑排序
-    /// 有环直接返回空集合
+    /// 拓扑排序：仅当有向无环图（directed acyclic graph，或称DAG）时，才能得到对应于该图的拓扑排序。
     func topologicalSort() -> [V] {
-        let uf = GenericUnionFind<Vertex>()
-        vertices.values.forEach { (vertex) in
-            uf.makeSet(v: vertex)
-        }
-        for edge in edges {
-            // 产生环
-            if (uf.isSame(v1: edge.from, v2: edge.to)) { return [] }
-            uf.union(v1: edge.from, v2: edge.to)
-        }
-        
         var result = [V]()
         var queue = [Vertex]()
         var ins = [Vertex: Int]()
@@ -222,7 +222,7 @@ extension ListGraph: GraphProtocal {
         // 初始化（将度为0的节点放入队列）
         vertices.forEach { (key, vertex) in
             let inCount = vertex.inEdges.count
-            if inCount == 0 {
+            if inCount == 0 { // 没有度为0即为有环，直接返回空结果集
                 queue.append(vertex)
             } else {
                 ins[vertex] = inCount
@@ -251,7 +251,7 @@ extension ListGraph: GraphProtocal {
     }
     
     /// 最小生成树
-    func mst() -> Set<EdgeInfo<V, W>> {
+    func mst() -> Set<EdgeInfo<V>> {
         return Int.random(in: 0 ... 1) == 0 ? prim() : kruskal()
     }
     
@@ -259,11 +259,11 @@ extension ListGraph: GraphProtocal {
     /// 算法从S={u0}（u0∈V），A={}开始，重复执行下述操作，直到S=V为止
     /// ✓找到切分C=(S，V–S)的最小横切边(u0，v0)并入集合A，同时将v0并入集合S
     /// - Returns: 返回最小生成树（最小支撑树）的所有边信息
-    private func prim() -> Set<EdgeInfo<V, W>> {
+    private func prim() -> Set<EdgeInfo<V>> {
         var iterator = vertices.values.makeIterator()
         guard let next = iterator.next() else { return [] }
         
-        var edgeInfos = Set<EdgeInfo<V, W>>()
+        var edgeInfos = Set<EdgeInfo<V>>()
         var addedVertices = Set<Vertex>()
         addedVertices.insert(next)
         let minHeap = MinHeap<Edge>(elements: Array(next.outEdges))
@@ -286,12 +286,12 @@ extension ListGraph: GraphProtocal {
     /// 若加入该边会与生成树形成环，则不加入该边
     /// 从第3条边开始可能形成环
     /// - Returns: 返回最小生成树（最小支撑树）的所有边信息
-    private func kruskal() -> Set<EdgeInfo<V, W>> {
+    private func kruskal() -> Set<EdgeInfo<V>> {
         let edgeSize = vertices.count - 1
         guard edgeSize >= 0  else {
             return []
         }
-        var edgeInfos = Set<EdgeInfo<V, W>>()
+        var edgeInfos = Set<EdgeInfo<V>>()
         let heap = MinHeap<Edge>(elements: Array(edges))
         let uf = GenericUnionFind<Vertex>()
         vertices.forEach { (key, vertex) in
@@ -310,37 +310,85 @@ extension ListGraph: GraphProtocal {
     
     /// 最短路径
     /// - Parameter begin: 开始顶点
-    func shortestPath(_ begin: V) -> [V: PathInfo<V, W>] {
-        return [:]
+    func shortestPath(_ begin: V) -> [V: PathInfo<V>] {
+        return dijkstra(begin)
     }
 
-    func shortestPath() -> [V: [V: PathInfo<V, W>]] {
+    func shortestPath() -> [V: [V: PathInfo<V>]] {
         return [:]
     }
     
-    private func dijkstra(_ begin: V) -> [V: PathInfo<V, W>]? {
+    private func dijkstra(_ begin: V) -> [V: PathInfo<V>] {
         let beginVertex = vertices[begin]
-        guard let _ = beginVertex else { return nil }
+        guard let _ = beginVertex else { return [:] }
         
-        var selectedPaths = [V: PathInfo<V, W>]()
-        var paths = [Vertex: PathInfo<V, W>]()
-        paths.updateValue(PathInfo(weight: nil), forKey: beginVertex!)
+        var selectedPaths = [V: PathInfo<V>]()
+        var paths = [Vertex: PathInfo<V>]()
+        paths.updateValue(PathInfo(weight: 0), forKey: beginVertex!)
         
         while !paths.isEmpty {
-            
+            let minEntry = getMinPath(paths: paths)
+            let minVertex = minEntry.key
+            let minPath = minEntry.value
+            // minEntry离开桌面
+            selectedPaths.updateValue(minPath, forKey: minVertex.value)
+            paths.removeValue(forKey: minVertex)
+            // 对它的minVertex的outEdges进行松弛操作
+            var isContinue = false
+            for edge in minEntry.key.outEdges {
+                // 如果edge.to已经离开桌面，就没必要进行松弛操作
+                for k in selectedPaths.keys {
+                    if k == edge.to.value {
+                        isContinue = true
+                        break
+                    }
+                }
+                if isContinue {
+                    continue
+                }
+                relaxForDijkstra(edge: edge, fromPath: minPath, paths: &paths)
+            }
         }
         
         return selectedPaths
     }
     
-    private func getMinPath(paths: [Vertex: PathInfo<V, W>]) -> Dictionary<Vertex, PathInfo<V, W>>.Element {
+    /// 松弛操作
+    /// - Parameters:
+    ///   - edge: 需要进行松弛的边
+    ///   - fromPath: edge的from的最短路径信息
+    ///   - paths: 存放着其他店（对于dijkstra来说，就是还没有离开桌面的点）的最短路径信息
+    private func relaxForDijkstra(edge: Edge, fromPath: PathInfo<V>, paths: inout [Vertex: PathInfo<V>]) {
+        // 新的可选择的最短路径：beginVertex到edge.from的最短路径 + edge.weight
+        let newWeight = fromPath.weight + edge.weight
+        // 以前的最短路径：beginVertex到edge.to的最短路径
+        let oldPath = paths[edge.to]
+        if newWeight > oldPath?.weight ?? 0 {
+            return
+        }
         
+        var newPath: PathInfo<V>!
+        if let _ = oldPath {
+            newPath = oldPath
+            newPath.edgeInfos.clear()
+        } else {
+            newPath = PathInfo<V>()
+            paths[edge.to] = newPath
+        }
+        
+        newPath.weight = newWeight
+        newPath.edgeInfos.last?.next = fromPath.edgeInfos.first
+        newPath.edgeInfos.last = fromPath.edgeInfos.last
+        newPath.edgeInfos.add(ele: edge.info())
+    }
+    
+    private func getMinPath(paths: [Vertex: PathInfo<V>]) -> Dictionary<Vertex, PathInfo<V>>.Element {
         var iterator = paths.makeIterator()
-        var minEntry: (key: Vertex, value: PathInfo<V, W>) = iterator.next()!
+        var minEntry: (key: Vertex, value: PathInfo<V>) = iterator.next()!
         
         while let next = iterator.next() {
             
-            if next.value.weight! < minEntry.value.weight! {
+            if next.value.weight < minEntry.value.weight {
                 minEntry = next
             }
         }
