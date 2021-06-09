@@ -14,7 +14,7 @@ public class ListGraph<Type> where Type: Hashable {
     
     // MARK: public
     /// 是否是有向无环图，利用并查集
-    public func isDagByUf() -> Bool {
+    public func isDag() -> Bool {
         let uf = GenericUnionFind<Vertex>()
         vertices.values.forEach { v in
             uf.makeSet(v: v)
@@ -318,6 +318,9 @@ extension ListGraph: GraphProtocal {
         return [:]
     }
     
+    /// dijkstra: 从一个顶点出发，Dijkstra算法只能求一个顶点到其他点的最短距离而不能任意两点。路径权值不能为负数
+    /// - Parameter begin: 开始顶点
+    /// - Returns: 结果
     private func dijkstra(_ begin: V) -> [V: PathInfo<V>] {
         let beginVertex = vertices[begin]
         guard let _ = beginVertex else { return [:] }
@@ -335,7 +338,7 @@ extension ListGraph: GraphProtocal {
             paths.removeValue(forKey: minVertex)
             // 对它的minVertex的outEdges进行松弛操作
             var isContinue = false
-            for edge in minEntry.key.outEdges {
+            for edge in minVertex.outEdges {
                 // 如果edge.to已经离开桌面，就没必要进行松弛操作
                 for k in selectedPaths.keys {
                     if k == edge.to.value {
@@ -363,13 +366,14 @@ extension ListGraph: GraphProtocal {
         let newWeight = fromPath.weight + edge.weight
         // 以前的最短路径：beginVertex到edge.to的最短路径
         let oldPath = paths[edge.to]
-        if newWeight > oldPath?.weight ?? 0 {
+        if newWeight > oldPath?.weight ?? Float.infinity {
             return
         }
         
-        var newPath: PathInfo<V>!
+        var newPath: PathInfo<V>
         if let _ = oldPath {
-            newPath = oldPath
+            if newWeight > oldPath!.weight { return }
+            newPath = oldPath!
             newPath.edgeInfos.clear()
         } else {
             newPath = PathInfo<V>()
@@ -378,6 +382,7 @@ extension ListGraph: GraphProtocal {
         
         newPath.weight = newWeight
         newPath.edgeInfos.last?.next = fromPath.edgeInfos.first
+        fromPath.edgeInfos.first?.pre = newPath.edgeInfos.last
         newPath.edgeInfos.last = fromPath.edgeInfos.last
         newPath.edgeInfos.add(ele: edge.info())
     }
