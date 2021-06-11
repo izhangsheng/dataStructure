@@ -59,7 +59,7 @@ extension TreeNode: Comparable {
 }
 
 public class BinaryTree<Type: Comparable> {
-    private var count = 0
+    var count = 0
     var root: TreeNode<Type>?
         
     init(root: TreeNode<Type>?) {
