@@ -11,7 +11,7 @@ import Foundation
 public class UnionFind {
     var parents: [Int]
     
-    init(capacity: Int) {
+    public init(capacity: Int) {
         parents = Array()
         for i in 0 ... capacity {
             parents[i] = i

@@ -29,12 +29,12 @@ public class TreeNode<Type: Comparable> {
     
     func isLeftChild() -> Bool {
         guard let _ = parent?.left else { return false }
-        return true
+        return self == parent?.left
     }
     
     func isRightChild() -> Bool {
         guard let _ = parent?.right else { return false }
-        return true
+        return self == parent?.right
     }
     
     func sibling() -> TreeNode<Type>? {
@@ -54,7 +54,7 @@ extension TreeNode: Comparable {
     }
     
     public static func == (lhs: TreeNode<Type>, rhs: TreeNode<Type>) -> Bool {
-        lhs.element == rhs.element
+        lhs.element == rhs.element && lhs.left?.element == rhs.left?.element && lhs.right?.element == rhs.right?.element && lhs.parent?.element == rhs.parent?.element
     }
 }
 
@@ -180,9 +180,7 @@ public class BinaryTree<Type: Comparable> {
         var queue = [root]
         while !queue.isEmpty {
             let node = queue.removeFirst()
-            if let nodeOK = node {
-                if visitor(nodeOK.element) { return }
-            }
+            if visitor(node!.element) { return }
             
             if let left = node?.left {
                 queue.append(left)
@@ -317,7 +315,7 @@ public class BinaryTree<Type: Comparable> {
     }
 }
 
-fileprivate extension BinaryTree {
+private extension BinaryTree {
     func preorder(visitor: ((Type) -> Bool), node: TreeNode<Type>?) {
         guard let nodeOK = node else { return }
         /// 利用访问器访问节点

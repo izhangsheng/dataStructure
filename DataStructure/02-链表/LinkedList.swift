@@ -75,6 +75,7 @@ public class LinkedList<T>: List {
                 first = last
             } else {
                 oldLast?.next = last
+                last?.pre = oldLast
             }
         } else {
             let next: BidirectionalNode? = getNode(idx: idx)

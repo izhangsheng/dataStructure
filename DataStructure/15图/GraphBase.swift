@@ -8,8 +8,8 @@
 
 import Foundation
 
-class EdgeInfo<V, W>: Hashable {
-    static func == (lhs: EdgeInfo<V, W>, rhs: EdgeInfo<V, W>) -> Bool {
+class EdgeInfo<V>: Hashable {
+    static func == (lhs: EdgeInfo<V>, rhs: EdgeInfo<V>) -> Bool {
         return lhs === rhs
     }
     
@@ -28,32 +28,31 @@ class EdgeInfo<V, W>: Hashable {
     
     var from: V
     var to: V
-    var weight: W?
+    var weight: Float = 0
     
-    init(_ from: V, _ to: V, _ weight: W?) {
+    init(_ from: V, _ to: V, _ weight: Float = 0) {
         self.from = from
         self.to = to
         self.weight = weight
     }
 }
 
-class PathInfo<V, W> {
-    var weight: W?
-    let edgeInfos: LinkedList<EdgeInfo<V, W>> = LinkedList(first: nil, last: nil)
-    init(weight: W? = nil) {
+class PathInfo<V> {
+    var weight: Float = 0
+    let edgeInfos: LinkedList<EdgeInfo<V>> = LinkedList(first: nil, last: nil)
+    init(weight: Float = 0) {
         self.weight = weight
     }
 }
 
 protocol GraphProtocal {
     associatedtype V: Hashable
-    associatedtype W
     
     func edgesSize() -> Int
     func verticesSize() -> Int
     func addVertex(_ v: V)
     func addEdge(_ from: V, _ to: V)
-    func addEdge(_ from: V, _ to: V, _ weight: W?)
+    func addEdge(_ from: V, _ to: V, _ weight: Float)
     func removeVertex(_ v: V)
     func removeEdge(_ from: V, _ to: V)
     
@@ -61,12 +60,11 @@ protocol GraphProtocal {
     func dfs(_ begin: V, vistor: ((_ v: V?) -> Bool))
     
     /// 最小生成树
-    func mst() -> Set<EdgeInfo<V, W>>
+    func mst() -> Set<EdgeInfo<V>>
     /// 拓扑排序
     func topologicalSort() -> [V]
     /// 最短路径
     /// - Parameter begin: 开始顶点
-    func shortestPath(_ begin: V) -> [V: PathInfo<V, W>]
-    func shortestPath() -> [V: [V: PathInfo<V, W>]]
-    
+    func shortestPath(_ begin: V) -> [V: PathInfo<V>]
+    func shortestPath() -> [V: [V: PathInfo<V>]]
 }

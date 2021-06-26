@@ -19,13 +19,8 @@ public class ArrayList<Element: Comparable> {
     private var elements: Array<Element?>
     
     public init(capacity: Int) {
-//        let realCapacity = (capacity < defaultCapacity) ? defaultCapacity : capacity
         elements = Array<Element>()
     }
-    
-//    public convenience init() {
-//        init(capacity: defaultCapacity)
-//    }
 }
 
 public extension ArrayList {
