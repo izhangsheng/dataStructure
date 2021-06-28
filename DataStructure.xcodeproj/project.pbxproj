@@ -15,6 +15,9 @@
 		173399B62361F10200C8FEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173399B42361F10200C8FEBC /* LaunchScreen.storyboard */; };
 		173399C12361F10200C8FEBC /* DataStructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399C02361F10200C8FEBC /* DataStructureTests.swift */; };
 		173399CC2361F10200C8FEBC /* DataStructureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173399CB2361F10200C8FEBC /* DataStructureUITests.swift */; };
+		1746B82A2689775E00969BAA /* BloomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746B8292689775E00969BAA /* BloomFilter.swift */; };
+		1746B82E268978C800969BAA /* SkipList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746B82D268978C800969BAA /* SkipList.swift */; };
+		1746B830268978D800969BAA /* KMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746B82F268978D800969BAA /* KMP.swift */; };
 		17790F4C2668730B006191AE /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17790F4B2668730B006191AE /* MaxHeap.swift */; };
 		17790F782668D952006191AE /* GenericUnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17790F772668D952006191AE /* GenericUnionFind.swift */; };
 		177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */; };
@@ -86,6 +89,9 @@
 		173399C72361F10200C8FEBC /* DataStructureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173399CB2361F10200C8FEBC /* DataStructureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureUITests.swift; sourceTree = "<group>"; };
 		173399CD2361F10200C8FEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1746B8292689775E00969BAA /* BloomFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomFilter.swift; sourceTree = "<group>"; };
+		1746B82D268978C800969BAA /* SkipList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipList.swift; sourceTree = "<group>"; };
+		1746B82F268978D800969BAA /* KMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMP.swift; sourceTree = "<group>"; };
 		17790F4B2668730B006191AE /* MaxHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeap.swift; sourceTree = "<group>"; };
 		17790F772668D952006191AE /* GenericUnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericUnionFind.swift; sourceTree = "<group>"; };
 		177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
@@ -187,6 +193,9 @@
 				17CD85B323CC4B2A00E645DA /* 12-字典树(Trie) */,
 				17AA1765249DACB300D3C9CA /* 13-并查集 */,
 				17C16E042664CFDB005DE6E2 /* 14-图 */,
+				1746B8282689771100969BAA /* 15-布隆过滤器 */,
+				1746B82B2689789400969BAA /* 16-跳表 */,
+				1746B82C268978A600969BAA /* 17-字符串 */,
 				173399A92361F10100C8FEBC /* AppDelegate.swift */,
 				173399AB2361F10100C8FEBC /* SceneDelegate.swift */,
 				173399AF2361F10100C8FEBC /* Main.storyboard */,
@@ -215,6 +224,30 @@
 				173399CD2361F10200C8FEBC /* Info.plist */,
 			);
 			path = DataStructureUITests;
+			sourceTree = "<group>";
+		};
+		1746B8282689771100969BAA /* 15-布隆过滤器 */ = {
+			isa = PBXGroup;
+			children = (
+				1746B8292689775E00969BAA /* BloomFilter.swift */,
+			);
+			path = "15-布隆过滤器";
+			sourceTree = "<group>";
+		};
+		1746B82B2689789400969BAA /* 16-跳表 */ = {
+			isa = PBXGroup;
+			children = (
+				1746B82D268978C800969BAA /* SkipList.swift */,
+			);
+			path = "16-跳表";
+			sourceTree = "<group>";
+		};
+		1746B82C268978A600969BAA /* 17-字符串 */ = {
+			isa = PBXGroup;
+			children = (
+				1746B82F268978D800969BAA /* KMP.swift */,
+			);
+			path = "17-字符串";
 			sourceTree = "<group>";
 		};
 		177A1B4B240CA8310035BDD5 /* 动态规划 */ = {
@@ -491,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17AA1767249DADB300D3C9CA /* UnionFind.swift in Sources */,
+				1746B830268978D800969BAA /* KMP.swift in Sources */,
 				17A059C623BE1AAB00DCFC1B /* AVLTree.swift in Sources */,
 				17AA176D249DB7ED00D3C9CA /* UnionFind_QU_S.swift in Sources */,
 				173399AE2361F10100C8FEBC /* ViewController.swift in Sources */,
@@ -522,6 +556,7 @@
 				17CD85B523CC4D1E00E645DA /* TreeSet.swift in Sources */,
 				17CD85C923CDBECB00E645DA /* MinHeap.swift in Sources */,
 				17970147238063CA00BE0FBC /* LinkedList.swift in Sources */,
+				1746B82E268978C800969BAA /* SkipList.swift in Sources */,
 				17CD85AD23CC4A3300E645DA /* RedBlackTree.swift in Sources */,
 				17790F782668D952006191AE /* GenericUnionFind.swift in Sources */,
 				17CD85C723CDBEBF00E645DA /* BinaryHeap.swift in Sources */,
@@ -529,6 +564,7 @@
 				17CD85BF23CDBE3800E645DA /* HashMap.swift in Sources */,
 				179D0A68239D0A010056C8D3 /* BinarySearchTree.swift in Sources */,
 				179D0A642396AC110056C8D3 /* CircleDeQueue.swift in Sources */,
+				1746B82A2689775E00969BAA /* BloomFilter.swift in Sources */,
 				177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
