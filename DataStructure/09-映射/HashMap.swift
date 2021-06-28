@@ -53,11 +53,10 @@ class HashMap<K, V> where K: Hashable, V: Equatable {
         // hash冲突，迭代寻找
         var curNode: Node? = headNode.next
         while curNode != nil {
-            curNode = curNode?.next
-            
             if curNode?.key == key {
                 return curNode
             }
+            curNode = curNode?.next
         }
         return nil
     }
@@ -158,8 +157,8 @@ extension HashMap: MapProtocal {
                 table[idx] = nil
                 return headNode.value
             }
-            var preNode: Node? = nil
-            var curNode: Node? = headNode
+            var preNode: Node? = headNode
+            var curNode: Node? = headNode.next
             while curNode != nil {
                 if curNode?.key == k {
                     preNode?.next = curNode?.next
