@@ -129,7 +129,7 @@ extension HashMap: MapProtocal {
     
     typealias Value = V
     
-    func set(forKey k: K, value v: V) -> V? {
+    @discardableResult func set(forKey k: K, value v: V) -> V? {
         resize()
         let old = getNode(key: k)
         if let oldExist = old {
@@ -175,7 +175,7 @@ extension HashMap: MapProtocal {
         return count == 0
     }
     
-    func remove(forKey k: K) -> V? {
+    @discardableResult func remove(forKey k: K) -> V? {
         let idx = index(key: k)
         let head: Node? = table[idx]
      

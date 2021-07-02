@@ -8,11 +8,12 @@
 
 import Foundation
 
-class HashSet<T: Equatable>: SetProtocal {
+class HashSet<T: Hashable>: SetProtocal {
     typealias Element = T
     
     var a: Dictionary = [String: T]()
-    private let hashMap = HashMap<String, T>()
+    private let hashMap = HashMap<T, String>()
+    private let placeholder = ""
     
     func size() -> Int {
         hashMap.size()
@@ -27,20 +28,20 @@ class HashSet<T: Equatable>: SetProtocal {
     }
     
     func contain(ele: T) -> Bool {
-        hashMap.containValue(value: ele)
+        hashMap.containKey(key: ele)
     }
     
     func add(ele: T) {
-//        hashMap.set(forKey: <#T##String#>, value: <#T##Equatable#>)
+        hashMap.set(forKey: ele, value: placeholder)
     }
     
     func remove(ele: T) {
-//        hashMap.remove(forKey: <#T##String#>)
+        hashMap.remove(forKey: ele)
     }
     
     func traversal(visitor: @escaping((T) -> Bool)) {
         hashMap.traversal { (key, value) in
-            visitor(value)
+            visitor(key)
         }
     }
 }

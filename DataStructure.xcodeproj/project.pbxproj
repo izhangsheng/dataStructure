@@ -18,6 +18,8 @@
 		1746B82A2689775E00969BAA /* BloomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746B8292689775E00969BAA /* BloomFilter.swift */; };
 		1746B82E268978C800969BAA /* SkipList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746B82D268978C800969BAA /* SkipList.swift */; };
 		1746B830268978D800969BAA /* KMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746B82F268978D800969BAA /* KMP.swift */; };
+		1746C762268C471500969BAA /* BruteForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746C761268C471500969BAA /* BruteForce.swift */; };
+		1746C764268C474200969BAA /* Boyer-Moore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746C763268C474200969BAA /* Boyer-Moore.swift */; };
 		17790F4C2668730B006191AE /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17790F4B2668730B006191AE /* MaxHeap.swift */; };
 		17790F782668D952006191AE /* GenericUnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17790F772668D952006191AE /* GenericUnionFind.swift */; };
 		177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */; };
@@ -92,6 +94,8 @@
 		1746B8292689775E00969BAA /* BloomFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomFilter.swift; sourceTree = "<group>"; };
 		1746B82D268978C800969BAA /* SkipList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipList.swift; sourceTree = "<group>"; };
 		1746B82F268978D800969BAA /* KMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMP.swift; sourceTree = "<group>"; };
+		1746C761268C471500969BAA /* BruteForce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BruteForce.swift; sourceTree = "<group>"; };
+		1746C763268C474200969BAA /* Boyer-Moore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Boyer-Moore.swift"; sourceTree = "<group>"; };
 		17790F4B2668730B006191AE /* MaxHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeap.swift; sourceTree = "<group>"; };
 		17790F772668D952006191AE /* GenericUnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericUnionFind.swift; sourceTree = "<group>"; };
 		177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
@@ -245,7 +249,9 @@
 		1746B82C268978A600969BAA /* 17-字符串 */ = {
 			isa = PBXGroup;
 			children = (
+				1746C761268C471500969BAA /* BruteForce.swift */,
 				1746B82F268978D800969BAA /* KMP.swift */,
+				1746C763268C474200969BAA /* Boyer-Moore.swift */,
 			);
 			path = "17-字符串";
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1746C762268C471500969BAA /* BruteForce.swift in Sources */,
 				17AA1767249DADB300D3C9CA /* UnionFind.swift in Sources */,
 				1746B830268978D800969BAA /* KMP.swift in Sources */,
 				17A059C623BE1AAB00DCFC1B /* AVLTree.swift in Sources */,
@@ -533,6 +540,7 @@
 				17CD85CF23CF0A4000E645DA /* Trie.swift in Sources */,
 				17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */,
 				17790F4C2668730B006191AE /* MaxHeap.swift in Sources */,
+				1746C764268C474200969BAA /* Boyer-Moore.swift in Sources */,
 				17AA176F249DB95400D3C9CA /* UnionFind_QU_R.swift in Sources */,
 				17CD85A723CC45E000E645DA /* SetProtocal.swift in Sources */,
 				179D0A66239949850056C8D3 /* BinaryTree.swift in Sources */,
