@@ -8,7 +8,7 @@
 
 
 ## 二叉树：<br/><br/>
-<img src="https://github.com/izhangsheng/dataStructure/blob/master/picture/tree.png" width=640><br/>
+<img src="https://github.com/izhangsheng/dataStructure/blob/master/picture/tree.png" width=480><br/>
 
 
 
