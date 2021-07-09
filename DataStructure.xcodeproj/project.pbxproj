@@ -22,7 +22,6 @@
 		1746C764268C474200969BAA /* Boyer-Moore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746C763268C474200969BAA /* Boyer-Moore.swift */; };
 		17790F4C2668730B006191AE /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17790F4B2668730B006191AE /* MaxHeap.swift */; };
 		17790F782668D952006191AE /* GenericUnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17790F772668D952006191AE /* GenericUnionFind.swift */; };
-		177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */; };
 		17970141237DA02900BE0FBC /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17970140237DA02900BE0FBC /* ArrayList.swift */; };
 		1797014323804AD100BE0FBC /* ListProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1797014223804AD100BE0FBC /* ListProtocal.swift */; };
 		17970145238052A200BE0FBC /* ArrayOfList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17970144238052A200BE0FBC /* ArrayOfList.swift */; };
@@ -98,7 +97,6 @@
 		1746C763268C474200969BAA /* Boyer-Moore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Boyer-Moore.swift"; sourceTree = "<group>"; };
 		17790F4B2668730B006191AE /* MaxHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeap.swift; sourceTree = "<group>"; };
 		17790F772668D952006191AE /* GenericUnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericUnionFind.swift; sourceTree = "<group>"; };
-		177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
 		17970140237DA02900BE0FBC /* ArrayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayList.swift; sourceTree = "<group>"; };
 		1797014223804AD100BE0FBC /* ListProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocal.swift; sourceTree = "<group>"; };
 		17970144238052A200BE0FBC /* ArrayOfList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOfList.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 				173399AD2361F10100C8FEBC /* ViewController.swift */,
 				173399B42361F10200C8FEBC /* LaunchScreen.storyboard */,
 				173399B22361F10200C8FEBC /* Assets.xcassets */,
-				177A1B4B240CA8310035BDD5 /* 动态规划 */,
 				173399B72361F10200C8FEBC /* Info.plist */,
 			);
 			path = DataStructure;
@@ -254,14 +251,6 @@
 				1746C763268C474200969BAA /* Boyer-Moore.swift */,
 			);
 			path = "17-字符串";
-			sourceTree = "<group>";
-		};
-		177A1B4B240CA8310035BDD5 /* 动态规划 */ = {
-			isa = PBXGroup;
-			children = (
-				177A1B4C240CA84D0035BDD5 /* DynamicProgramming.swift */,
-			);
-			path = "动态规划";
 			sourceTree = "<group>";
 		};
 		17AA1765249DACB300D3C9CA /* 13-并查集 */ = {
@@ -573,7 +562,6 @@
 				179D0A68239D0A010056C8D3 /* BinarySearchTree.swift in Sources */,
 				179D0A642396AC110056C8D3 /* CircleDeQueue.swift in Sources */,
 				1746B82A2689775E00969BAA /* BloomFilter.swift in Sources */,
-				177A1B4D240CA84D0035BDD5 /* DynamicProgramming.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
