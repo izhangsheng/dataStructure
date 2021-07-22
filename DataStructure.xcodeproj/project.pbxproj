@@ -186,18 +186,17 @@
 				17CD85A023CC45C700E645DA /* 03-栈 */,
 				17E6A9FA237B060400998187 /* 04-队列 */,
 				17E6A9FC237B064F00998187 /* 05-二叉搜索树 */,
-				17E6A9FD237B066F00998187 /* 06-AVL树 */,
-				17CD85AB23CC4A3200E645DA /* 07-红黑树 */,
-				17CD85A323CC45E000E645DA /* 08-集合 */,
-				17CD85AE23CC4A7600E645DA /* 09-映射 */,
-				17CD85B123CC4B1C00E645DA /* 10-堆 */,
-				17CD85B223CC4B2300E645DA /* 11-优先级队列 */,
-				17CD85B323CC4B2A00E645DA /* 12-字典树(Trie) */,
-				17AA1765249DACB300D3C9CA /* 13-并查集 */,
-				17C16E042664CFDB005DE6E2 /* 14-图 */,
-				1746B8282689771100969BAA /* 15-布隆过滤器 */,
-				1746B82B2689789400969BAA /* 16-跳表 */,
-				1746B82C268978A600969BAA /* 17-字符串 */,
+				17E6A9FD237B066F00998187 /* 06-平衡树 */,
+				17CD85A323CC45E000E645DA /* 07-集合 */,
+				17CD85AE23CC4A7600E645DA /* 08-映射 */,
+				17CD85B123CC4B1C00E645DA /* 09-堆 */,
+				17CD85B223CC4B2300E645DA /* 10-优先级队列 */,
+				17CD85B323CC4B2A00E645DA /* 11-字典树(Trie) */,
+				17AA1765249DACB300D3C9CA /* 12-并查集 */,
+				17C16E042664CFDB005DE6E2 /* 13-图 */,
+				1746B8282689771100969BAA /* 14-布隆过滤器 */,
+				1746B82B2689789400969BAA /* 15-跳表 */,
+				1746B82C268978A600969BAA /* 16-字符串 */,
 				173399A92361F10100C8FEBC /* AppDelegate.swift */,
 				173399AB2361F10100C8FEBC /* SceneDelegate.swift */,
 				173399AF2361F10100C8FEBC /* Main.storyboard */,
@@ -227,33 +226,33 @@
 			path = DataStructureUITests;
 			sourceTree = "<group>";
 		};
-		1746B8282689771100969BAA /* 15-布隆过滤器 */ = {
+		1746B8282689771100969BAA /* 14-布隆过滤器 */ = {
 			isa = PBXGroup;
 			children = (
 				1746B8292689775E00969BAA /* BloomFilter.swift */,
 			);
-			path = "15-布隆过滤器";
+			path = "14-布隆过滤器";
 			sourceTree = "<group>";
 		};
-		1746B82B2689789400969BAA /* 16-跳表 */ = {
+		1746B82B2689789400969BAA /* 15-跳表 */ = {
 			isa = PBXGroup;
 			children = (
 				1746B82D268978C800969BAA /* SkipList.swift */,
 			);
-			path = "16-跳表";
+			path = "15-跳表";
 			sourceTree = "<group>";
 		};
-		1746B82C268978A600969BAA /* 17-字符串 */ = {
+		1746B82C268978A600969BAA /* 16-字符串 */ = {
 			isa = PBXGroup;
 			children = (
 				1746C761268C471500969BAA /* BruteForce.swift */,
 				1746B82F268978D800969BAA /* KMP.swift */,
 				1746C763268C474200969BAA /* Boyer-Moore.swift */,
 			);
-			path = "17-字符串";
+			path = "16-字符串";
 			sourceTree = "<group>";
 		};
-		17AA1765249DACB300D3C9CA /* 13-并查集 */ = {
+		17AA1765249DACB300D3C9CA /* 12-并查集 */ = {
 			isa = PBXGroup;
 			children = (
 				17AA1766249DADB300D3C9CA /* UnionFind.swift */,
@@ -263,16 +262,16 @@
 				17AA176E249DB95400D3C9CA /* UnionFind_QU_R.swift */,
 				17790F772668D952006191AE /* GenericUnionFind.swift */,
 			);
-			path = "13-并查集";
+			path = "12-并查集";
 			sourceTree = "<group>";
 		};
-		17C16E042664CFDB005DE6E2 /* 14-图 */ = {
+		17C16E042664CFDB005DE6E2 /* 13-图 */ = {
 			isa = PBXGroup;
 			children = (
 				17C16E052664D12A005DE6E2 /* GraphBase.swift */,
 				17C16E102664EF22005DE6E2 /* ListGraph.swift */,
 			);
-			path = "14-图";
+			path = "13-图";
 			sourceTree = "<group>";
 		};
 		17CD85A023CC45C700E645DA /* 03-栈 */ = {
@@ -283,7 +282,7 @@
 			path = "03-栈";
 			sourceTree = "<group>";
 		};
-		17CD85A323CC45E000E645DA /* 08-集合 */ = {
+		17CD85A323CC45E000E645DA /* 07-集合 */ = {
 			isa = PBXGroup;
 			children = (
 				17CD85A523CC45E000E645DA /* SetProtocal.swift */,
@@ -291,51 +290,43 @@
 				17CD85B423CC4D1E00E645DA /* TreeSet.swift */,
 				17CD85C223CDBE7200E645DA /* HashSet.swift */,
 			);
-			path = "08-集合";
+			path = "07-集合";
 			sourceTree = "<group>";
 		};
-		17CD85AB23CC4A3200E645DA /* 07-红黑树 */ = {
-			isa = PBXGroup;
-			children = (
-				17CD85AC23CC4A3200E645DA /* RedBlackTree.swift */,
-			);
-			path = "07-红黑树";
-			sourceTree = "<group>";
-		};
-		17CD85AE23CC4A7600E645DA /* 09-映射 */ = {
+		17CD85AE23CC4A7600E645DA /* 08-映射 */ = {
 			isa = PBXGroup;
 			children = (
 				17CD85B623CC67D300E645DA /* MapProtocal.swift */,
 				17CD85B823CC6A8E00E645DA /* TreeMap.swift */,
 				17CD85BE23CDBE3800E645DA /* HashMap.swift */,
 			);
-			path = "09-映射";
+			path = "08-映射";
 			sourceTree = "<group>";
 		};
-		17CD85B123CC4B1C00E645DA /* 10-堆 */ = {
+		17CD85B123CC4B1C00E645DA /* 09-堆 */ = {
 			isa = PBXGroup;
 			children = (
 				17CD85C823CDBECB00E645DA /* MinHeap.swift */,
 				17790F4B2668730B006191AE /* MaxHeap.swift */,
 				17CD85C623CDBEBF00E645DA /* BinaryHeap.swift */,
 			);
-			path = "10-堆";
+			path = "09-堆";
 			sourceTree = "<group>";
 		};
-		17CD85B223CC4B2300E645DA /* 11-优先级队列 */ = {
+		17CD85B223CC4B2300E645DA /* 10-优先级队列 */ = {
 			isa = PBXGroup;
 			children = (
 				17CD85CC23CF064000E645DA /* PriorityQueue.swift */,
 			);
-			path = "11-优先级队列";
+			path = "10-优先级队列";
 			sourceTree = "<group>";
 		};
-		17CD85B323CC4B2A00E645DA /* 12-字典树(Trie) */ = {
+		17CD85B323CC4B2A00E645DA /* 11-字典树(Trie) */ = {
 			isa = PBXGroup;
 			children = (
 				17CD85CE23CF0A4000E645DA /* Trie.swift */,
 			);
-			path = "12-字典树(Trie)";
+			path = "11-字典树(Trie)";
 			sourceTree = "<group>";
 		};
 		17E6A9F7237B059C00998187 /* 01-动态数组 */ = {
@@ -378,13 +369,14 @@
 			path = "05-二叉搜索树";
 			sourceTree = "<group>";
 		};
-		17E6A9FD237B066F00998187 /* 06-AVL树 */ = {
+		17E6A9FD237B066F00998187 /* 06-平衡树 */ = {
 			isa = PBXGroup;
 			children = (
 				17A059C723C30CD800DCFC1B /* BBSTree.swift */,
 				17A059C523BE1AAB00DCFC1B /* AVLTree.swift */,
+				17CD85AC23CC4A3200E645DA /* RedBlackTree.swift */,
 			);
-			path = "06-AVL树";
+			path = "06-平衡树";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

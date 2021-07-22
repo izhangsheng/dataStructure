@@ -58,7 +58,7 @@ class KMP {
             }
             // 相同情况，就是 k的下一位，和 i 相同时，此时我们已经知道 [0, i-1]的最长前后缀
             // 然后 k - 1 又和 i 相同，最长前后缀加1，即可
-            if chars[k+1] == chars[i] {
+            if chars[k + 1] == chars[i] {
                 k += 1
             }
             next[i] = k

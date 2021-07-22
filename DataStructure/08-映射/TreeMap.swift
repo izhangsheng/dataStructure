@@ -405,7 +405,7 @@ private extension TreeMap {
             
             /// 兄弟节点必然是黑色
             if isBlack(node: sibling?.left), isBlack(node: sibling?.right) {
-                /// 兄弟节点没有一个红色子节点，付节点要向下跟兄弟节点合并
+                /// 兄弟节点没有一个红色子节点，父节点要向下跟兄弟节点合并
                 let parentIsBlack = isBlack(node: parent)
                 black(node: parent)
                 red(node: sibling)
