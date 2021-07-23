@@ -11,7 +11,6 @@ import Foundation
 class HashSet<T: Hashable>: SetProtocal {
     typealias Element = T
     
-    var a: Dictionary = [String: T]()
     private let hashMap = HashMap<T, String>()
     private let placeholder = ""
     

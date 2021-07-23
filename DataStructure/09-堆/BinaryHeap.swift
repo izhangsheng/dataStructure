@@ -40,7 +40,7 @@ public class BinaryHeap<Type> where Type: Comparable {
     public func add(withElement ele: Type) {
         elements[count] = ele
         count += 1
-        siftUp(count - 1)
+        siftDown(count - 1)
     }
     
     /// 获得堆顶元素
